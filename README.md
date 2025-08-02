@@ -1,12 +1,12 @@
 # my_home_lab
 
+I choose to install ProxMox VE for it's simplicity and purpose built design.
+I will be interacting with the machine (a Thinkpad W541) via the browser interface on my personal laptop over a LAN connection.
+
 I have a few projects I would like to use as an oppurtunity to learn about various SysAdmin practices.
 These include:
-- Automated Backups to server
-- PFSense Firewall Configuration
-- Nextcloud Setup (free Google Drive)
-- Wireguard VPN Server
-- DNS Sever (Pi-hole + unbound)
-- DHCP Server
 
-I will complete these projects mainly on my Ubuntu Desktop running a hypervisor containing a virtual machine (VM) for each service. My goal is to make my tech devices connect seemlessly across iOS, Windows, and Linux. 
+I want to run three main services on this machine
+1. Automated Backup & Cloud Storage Server
+2. Media Server
+3. Networking Services
