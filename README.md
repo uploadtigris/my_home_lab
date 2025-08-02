@@ -1,12 +1,47 @@
 # my_home_lab
 
-I choose to install ProxMox VE for it's simplicity and purpose built design.
-I will be interacting with the machine (a Thinkpad W541) via the browser interface on my personal laptop over a LAN connection.
+> Building a virtualized homelab on ThinkPad W541 hardware to learn SysAdmin practices through hands-on implementation
 
-I have a few projects I would like to use as an oppurtunity to learn about various SysAdmin practices.
-These include:
+## Platform
 
-I want to run three main services on this machine
-1. Automated Backup & Cloud Storage Server
-2. Media Server
-3. Networking Services
+**Hardware:** ThinkPad W541 Workstation  
+**Hypervisor:** Proxmox Virtual Environment (VE)  
+**Management:** Web interface via LAN connection
+
+Proxmox VE chosen for its purpose-built design and enterprise-grade virtualization capabilities.
+
+## Services Architecture
+
+### 1. Automated Backup & Cloud Storage Server
+**Technologies:**
+- Nextcloud - Self-hosted cloud platform
+- Duplicati/Restic - Automated backup solutions  
+- Syncthing - File synchronization
+
+### 2. Media Server
+**Technologies:**
+- Plex/Jellyfin - Media streaming
+- Sonarr/Radarr - Automated content management
+- qBittorrent - Download management
+
+### 3. Networking Services
+**Technologies:**
+- Pi-hole - DNS and ad blocking
+- Nginx Proxy Manager - Reverse proxy and SSL
+- Uptime Kuma - Service monitoring
+
+## Learning Objectives
+
+- Virtualization and resource management
+- Container deployment with Docker
+- Network security and SSL certificate automation
+- Backup strategies and disaster recovery
+- Infrastructure monitoring and alerting
+- Configuration management and documentation
+
+## Goals
+
+- Achieve reliable self-hosted infrastructure
+- Eliminate dependency on cloud storage providers
+- Master essential SysAdmin workflows
+- Build comprehensive monitoring and backup systems
