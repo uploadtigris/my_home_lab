@@ -29,7 +29,7 @@ Proxmox VE chosen for its purpose-built design and enterprise-grade virtualizati
 - Pi-hole - DNS and ad blocking
 - Nginx Proxy Manager - Reverse proxy and SSL
 - Uptime Kuma - Service monitoring
-
+```
 Physical Hardware
 └── Proxmox VE (Host OS - Debian-based)
     ├── VM 1: Ubuntu/Debian (Media Server)
@@ -44,7 +44,7 @@ Physical Hardware
         ├── Pi-hole
         ├── Nginx Proxy Manager
         └── Uptime Kuma
-
+```
 ## Learning Objectives
 
 - Virtualization and resource management
