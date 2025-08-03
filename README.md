@@ -1,6 +1,7 @@
 # my_home_lab
 
-> Building a virtualized homelab on ThinkPad W541 hardware to learn SysAdmin practices through hands-on implementation
+> Building a virtualized homelab on ThinkPad W541 hardware to learn SysAdmin practices through hands-on implementation \
+> TODO: Need to get HDD enclosue for my 2, 2TB HDD drives
 
 ## Platform
 
