@@ -45,3 +45,13 @@ Advanced ~ DoS Protection
 ## IP & MAC Binding
 I will be implementing ARP Binding so that devices trying to access my home network will need both the correct, registered IPv4 and MAC addresses
 >[ARP spoofing](https://www.geeksforgeeks.org/ethical-hacking/what-is-arp-spoofing-attack/) is a cyber attack that allows hackers to intercept communications between network devices on a network. Hackers can also use ARP spoofing to alter or block all traffic between devices on the network.
+>
+## Dynamic DNS
+- [What is DDNS? {youtube video}](https://www.youtube.com/watch?v=rOLGvZagdC0)
+  
+  > Dynamic DNS is a useful service that allows you to use a fixed and memorable address for your home network even when your ISP changes your home network's IP address. You can often set up DDNS on your router. You can also run a DDNS client on one of your devices, like a computer, a NAS, or a Raspberry Pi. [source](https://www.howtogeek.com/866573/what-is-dynamic-dns-ddns-and-how-do-you-set-it-up/)
+
+DNS &rarr; static IP \
+Dynamic DNS (DDNS) &rarr; dynamic IP
+
+
