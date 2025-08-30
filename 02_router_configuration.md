@@ -20,5 +20,5 @@ End IP Address: 192.168.0.### &rarr; broadcast address; This is the last address
 Lease Time: 120 minutes (default time) \
 Default Gateway: 192.168.0.1 &rarr; This is the [IPv4 address of the device](https://www.youtube.com/watch?v=pCcJFdYNamc) connecting the LAN to the WAN\
 Default Domain: \
-DNS Server: 1.1.1.1 &rarr; (cloudflare);[why?](https://theispinfo.com/best-dns-settings-for-faster-internet/) \
+DNS Server: 1.1.1.1 &rarr; (cloudflare);[why configure the DNS Server?](https://theispinfo.com/best-dns-settings-for-faster-internet/) \
 Secondary DNS Server: 8.8.8.8 &rarr; (google) \
