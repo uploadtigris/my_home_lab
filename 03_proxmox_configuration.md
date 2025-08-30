@@ -27,7 +27,7 @@ Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
      
    *BE AWARE of the warning message:* 
      >Note: ZFS is not compatible with disks backed by a hardware RAID controller. For details see the reference documentation.
-3. Installing an ISO
+3. Download an ISO
    - for my installation I will be using Debian, which you can find [here](https://www.debian.org/releases/)
    - we will need to find the architecture type of the computer. In the proxmox terminal enter the following command:
      
@@ -40,6 +40,10 @@ Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
 
      <code>[debian installation](https://www.debian.org/CD/)</code>
 
-     I will go ahead with the Network Install
+     I will go ahead with the Network Install @ [](https://www.debian.org/CD/netinst/)
+     & download [this ISO network download for amd64 devices](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.0.0-amd64-netinst.iso)
+
+4. Install ISO in Proxmox
+
      
 
