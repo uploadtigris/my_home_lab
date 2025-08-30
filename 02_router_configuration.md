@@ -43,5 +43,5 @@ Advanced ~ DoS Protection
 - Forbid Pink Packet From WAN Port &rarr; This means that the subnet cannot be pinged without a VPN connection
 
 ## IP & MAC Binding
-I will be implementing ARP Binding so that devices trying to access my home network will need both the correct (& registered) IPv4 and MAC addresses
+I will be implementing ARP Binding so that devices trying to access my home network will need both the correct, registered IPv4 and MAC addresses
 >[ARP spoofing](https://www.geeksforgeeks.org/ethical-hacking/what-is-arp-spoofing-attack/) is a cyber attack that allows hackers to intercept communications between network devices on a network. Hackers can also use ARP spoofing to alter or block all traffic between devices on the network.
