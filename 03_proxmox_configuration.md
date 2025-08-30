@@ -27,5 +27,19 @@ Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
      
    *BE AWARE of the warning message:* 
      >Note: ZFS is not compatible with disks backed by a hardware RAID controller. For details see the reference documentation.
-3. 
+3. Installing an ISO
+   - for my installation I will be using Debian, which you can find [here](https://www.debian.org/releases/)
+   - we will need to find the architecture type of the computer. In the proxmox terminal enter the following command:
+     
+     <code>uname -m</code>
+     
+     if <code>x86_64</code> is returned, this means we have a 64-bit system \
+     if <code>i686</code> is returned, this means we have a 32-bit system
+
+     My system is a 64-bit system so I will navigate to:
+
+     <code>[debian installation](https://www.debian.org/CD/)</code>
+
+     I will go ahead with the Network Install
+     
 
