@@ -54,4 +54,11 @@ I will be implementing ARP Binding so that devices trying to access my home netw
 DNS &rarr; static IP \
 Dynamic DNS (DDNS) &rarr; dynamic IP
 
+> In short, DDNS allows you to access a computer at home via RDP even if your IP address changes. It does this by pairing the computers new IP to an alias like "tigrishomeserver.ddns.org".
 
+#TODO: Configure DDNS for: \
+[ ] uploadtigris website
+[ ] alexis's website
+[ ] nextcloud
+[ ] jellyfin
+[ ] home security camera service
