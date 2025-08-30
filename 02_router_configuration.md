@@ -16,13 +16,13 @@ Wireless Security &rarr; WPA2 & AES Encryption
 
 ## DHCP (Dynamic Host Configuration Protocol) Settings
 DHCP Settings
-- Start IP Address: 192.168.0.### &rarr; network address; This is the first address in a subnet range. It typically represents the network address, which identifies the subnet itself. \
-- End IP Address: 192.168.0.### &rarr; broadcast address; This is the last address in the subnet range. It is often used as the broadcast address, which allows communication to all devices within that subnet. \
-- Lease Time: 120 minutes (default time) \
+- Start IP Address: 192.168.0.### &rarr; network address; This is the first address in a subnet range. It typically represents the network address, which identifies the subnet itself. 
+- End IP Address: 192.168.0.### &rarr; broadcast address; This is the last address in the subnet range. It is often used as the broadcast address, which allows communication to all devices within that subnet. 
+- Lease Time: 120 minutes (default time) 
 - Default Gateway: 192.168.0.1 &rarr; This is the [IPv4 address of the device](https://www.youtube.com/watch?v=pCcJFdYNamc) connecting the LAN to the WAN\
-- Default Domain: \
-- DNS Server: 1.1.1.1 &rarr; (cloudflare);[why configure the DNS Server?](https://theispinfo.com/best-dns-settings-for-faster-internet/) \
-- Secondary DNS Server: 8.8.8.8 &rarr; (google) \
+- Default Domain: 
+- DNS Server: 1.1.1.1 &rarr; (cloudflare);[why configure the DNS Server?](https://theispinfo.com/best-dns-settings-for-faster-internet/) 
+- Secondary DNS Server: 8.8.8.8 &rarr; (google) 
   
 Address Resevation
 - I am reserving two IPv4 addresses: one for my laptop and one for my Proxmox server which will handle ingress traffic requests
@@ -30,10 +30,10 @@ Address Resevation
 - I will also configure ARP Binding in the IP & MAC Binding section to reduce risks of [ARP spoofing attacks](https://www.geeksforgeeks.org/ethical-hacking/what-is-arp-spoofing-attack/)
 
 ## Forwarding
-Virtual Server
-Port Triggering
-DMZ
-UPnP
+Virtual Server \
+Port Triggering \
+DMZ \
+UPnP 
 
 ## Security
 Advanced ~ DoS Protection
@@ -43,4 +43,5 @@ Advanced ~ DoS Protection
 - Forbid Pink Packet From WAN Port &rarr; This means that the subnet cannot be pinged without a VPN connection
 
 ## IP & MAC Binding
->ARP spoofing is a cyber attack that allows hackers to intercept communications between network devices on a network. Hackers can also use ARP spoofing to alter or block all traffic between devices on the network.
+I will be implementing ARP Binding so that devices trying to access my home network will need both the correct (& registered) IPv4 and MAC addresses
+>[ARP spoofing](https://www.geeksforgeeks.org/ethical-hacking/what-is-arp-spoofing-attack/) is a cyber attack that allows hackers to intercept communications between network devices on a network. Hackers can also use ARP spoofing to alter or block all traffic between devices on the network.
