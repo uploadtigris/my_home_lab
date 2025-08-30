@@ -41,9 +41,12 @@ Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
      <code>[debian installation](https://www.debian.org/CD/)</code>
 
      I will go ahead with the Network Install @ [](https://www.debian.org/CD/netinst/)
-     & download [this ISO network download for amd64 devices](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.0.0-amd64-netinst.iso)
+     & **copy the link** for [this ISO network download for amd64 devices](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.0.0-amd64-netinst.iso)
 
 4. Install ISO in Proxmox
+   - I am going to take the download link from the last step and insert @
+  
+     <code>pve &rarr; local (pve) &rarr; ISO Images &rarr; URL</code>
 
      
 
