@@ -18,7 +18,7 @@ Wireless Security &rarr; WPA2 & AES Encryption
 Start IP Address: 192.168.0.### &rarr; network address; This is the first address in a subnet range. It typically represents the network address, which identifies the subnet itself. \
 End IP Address: 192.168.0.### &rarr; broadcast address; This is the last address in the subnet range. It is often used as the broadcast address, which allows communication to all devices within that subnet. \
 Lease Time: 120 minutes (default time) \
-Default Gateway: \
+Default Gateway: 192.168.0.1 &rarr; This is the [IPv4 address of the device](https://www.youtube.com/watch?v=pCcJFdYNamc) connecting the LAN to the WAN\
 Default Domain: \
 DNS Server: 1.1.1.1 &rarr; (cloudflare);[why?](https://theispinfo.com/best-dns-settings-for-faster-internet/) \
 Secondary DNS Server: 8.8.8.8 &rarr; (google) \
