@@ -6,7 +6,12 @@
 - enter IP + port address from Proxmox install into a browser's URL bar (i.e. https://192.168.0.1:####/ as appears on your GUI or terminal)
 ## 2. Use [Proxmox VE post-install script](https://community-scripts.github.io/ProxmoxVE/scripts?id=post-pve-install)
 - MAKE SURE TO ALWAYS CHECK THE SOURCE OF SCRIPTS!!!
-## 3. Connecting NAS Storage
+## 3. Connecting NAS Storage (this is for later)
 Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
-  
+
+- jumping to another guide as the above one is not giving me the information I want
+
+[Proxmox beginner tutorial](https://forum.proxmox.com/threads/proxmox-beginner-tutorial-how-to-set-up-your-first-virtual-machine-on-a-secondary-hard-disk.59559/)
+
+
 
