@@ -27,6 +27,8 @@ Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
      
    *BE AWARE of the warning message:* 
      >Note: ZFS is not compatible with disks backed by a hardware RAID controller. For details see the reference documentation.
+
+   - It is best practice to install Proxmox on a different drive than the rest of the VMs. This is how I have this project set up.
 3. Download an ISO
    - for my installation I will be using Debian, which you can find [here](https://www.debian.org/releases/)
    - we will need to find the architecture type of the computer. In the proxmox terminal enter the following command:
@@ -47,6 +49,8 @@ Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
    - I am going to take the download link from the last step and insert @
   
      <code>pve &rarr; local (pve) &rarr; ISO Images &rarr; URL</code>
+
+   - 
 
      
 
