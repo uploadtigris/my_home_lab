@@ -36,6 +36,7 @@ Physical Hardware
 # VM 1: Media Server
 - OS: Debian 13
 - Total Memory Allocation: 8 GB
+- Storage Allocation: TBA
 - Cores: 1
 - Sockets: 1
     - Plex/Jellyfin: 4 GB
@@ -45,7 +46,7 @@ Physical Hardware
 # VM 2: Storage Server
 - OS: Debian 13
 - Total Memory Allocation: 8 GB
-- Storage Allocation: 500 GB
+- Storage Allocation: 480 GB
 - Cores: 1
 - Sockets: 1
     - Nextcloud: Primary storage user; will consume most of the 500 GB for file storage.
@@ -61,33 +62,6 @@ Physical Hardware
     - Pi-hole: Requires minimal space for logs and blocklists.
     - Nginx Proxy Manager: Requires minimal space for configuration and certificates.
     - Uptime Kuma: Requires minimal space for monitoring data.
-```
-# VM 1: Media Server
-- OS: Debian 13
-- *Total Memory Allocation: 8 GB*
-- Cores: 1
-- Sockets: 1
-    - Plex/Jellyfin: 4 GB
-    - Sonarr/Radarr: 2 GB
-    - qBittorrent: 2 GB
-
-# VM 2: Storage Server
-- OS: Debian 13
-- *Total Memory Allocation: 8 GB*
-- Cores: 1
-- Sockets: 1
-    - Nextcloud: 4 GB
-    - Duplicati: 2 GB
-    - Syncthing: 2 GB
-
-# VM 3: Network Services
-- OS: Debian 13
-- *Total Memory Allocation: 2 GB*
-- Cores: 1
-- Sockets: 1
-    - Pi-hole: 0.5 GB
-    - Nginx Proxy Manager: 0.5 GB
-    - Uptime Kuma: 1 GB
 ```
 
 ### 1. Automated Backup & Cloud Storage Server
