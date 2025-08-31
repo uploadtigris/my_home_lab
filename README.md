@@ -46,7 +46,7 @@ Physical Hardware
 # VM 2: Storage Server
 - OS: Debian 13
 - Total Memory Allocation: 8 GB
-- Storage Allocation: 480 GB
+- Storage Allocation: 450 GB
 - Cores: 1
 - Sockets: 1
     - Nextcloud: Primary storage user; will consume most of the 500 GB for file storage.
