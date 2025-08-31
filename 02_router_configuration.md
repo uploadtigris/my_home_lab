@@ -40,7 +40,7 @@ Advanced ~ DoS Protection
 - Enable ICMP-Flood Attack Filtering @ 50 packets/second
 - Enable UDP-Flood Attack Filtering @ 500 packets/second
 - Enable TCP-SYN-Flood Attack Filtering @ 50 packets/second
-- Forbid Pink Packet From WAN Port &rarr; This means that the subnet cannot be pinged without a VPN connection
+- Forbid Ping Packet From WAN Port &rarr; This means that the subnet cannot be pinged without a VPN connection
 
 ## IP & MAC Binding
 I will be implementing ARP Binding so that devices trying to access my home network will need both the correct, registered IPv4 and MAC addresses
