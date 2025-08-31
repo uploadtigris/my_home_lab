@@ -38,9 +38,7 @@ Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
      if <code>x86_64</code> is returned, this means we have a 64-bit system \
      if <code>i686</code> is returned, this means we have a 32-bit system
 
-     My system is a 64-bit system so I will navigate to:
-
-     <code>[debian installation](https://www.debian.org/CD/)</code>
+     My system is a 64-bit system so I will navigate to: <code>[debian installation](https://www.debian.org/CD/)</code>
 
      I will go ahead with the Network Install @ [](https://www.debian.org/CD/netinst/)
      & **copy the link** for [this ISO network download for amd64 devices](https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.0.0-amd64-netinst.iso)
