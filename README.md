@@ -30,6 +30,40 @@ Physical Hardware
         └── Uptime Kuma
 ```
 
+### Service Resource Distribution
+
+```
+No problem, I'll remove the asterisks used for bolding. Here is the revised markdown, with the bolding removed.
+
+```
+# VM 1: Media Server
+- OS: Debian 13
+- *Total Memory Allocation: 8 GB*
+- Cores: 1
+- Sockets: 1
+    - Plex/Jellyfin: 4 GB
+    - Sonarr/Radarr: 2 GB
+    - qBittorrent: 2 GB
+
+# VM 2: Storage Server
+- OS: Debian 13
+- *Total Memory Allocation: 8 GB*
+- Cores: 1
+- Sockets: 1
+    - Nextcloud: 4 GB
+    - Duplicati: 2 GB
+    - Syncthing: 2 GB
+
+# VM 3: Network Services
+- OS: Debian 13
+- *Total Memory Allocation: 2 GB*
+- Cores: 1
+- Sockets: 1
+    - Pi-hole: 0.5 GB
+    - Nginx Proxy Manager: 0.5 GB
+    - Uptime Kuma: 1 GB
+```
+
 ### 1. Automated Backup & Cloud Storage Server
 **Technologies:**
 - Nextcloud - Self-hosted cloud platform
