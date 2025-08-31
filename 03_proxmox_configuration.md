@@ -66,5 +66,7 @@ Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
 
          *They remaining cores will be used at a later date*
 
+   - 
+
      
 
