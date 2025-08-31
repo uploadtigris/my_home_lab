@@ -53,7 +53,18 @@ Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
   
      <code>lscpu</code>
 
-     In my case we have a Intel(R) Core(TM) i7-4710MQ CPU @ 2.50GHz. 
+     In my case we have a Intel(R) Core(TM) i7-4710MQ CPU @ 2.50GHz.
+     - We get that my CPU has:
+          - Threads per core: 2
+          - Core per socket: 4
+          - Sockets: 1 &rarr; this just means that there is only a single CPU in the device
+     - This means that this CPU has 8 CPUs or 8 logical processors (as 4 cores X 2 threads = 8 processors)
+     - So, we will distribute the resources as such: \
+         Media Server: 2 cores, 1 socket \
+         Storage Server: 3 cores, 1 socket \
+         Network Services: 1 core, 1 socket 
+
+         *They remaining cores will be used at a later date*
 
      
 
