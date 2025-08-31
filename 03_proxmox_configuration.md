@@ -48,7 +48,12 @@ Proxmox GUI (in browser) &rarr; Datacenter &rarr; Add: NFS
   
      <code>pve &rarr; local (pve) &rarr; ISO Images &rarr; URL</code>
 
-   - 
+   ISO Configuration
+   - I want to find out how many cores & sockets the device has. So, I will run:
+  
+     <code>lscpu</code>
+
+     In my case we have a Intel(R) Core(TM) i7-4710MQ CPU @ 2.50GHz. 
 
      
 
