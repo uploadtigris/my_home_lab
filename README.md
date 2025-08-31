@@ -37,7 +37,7 @@ Physical Hardware
 - OS: Debian 13
 - Total Memory Allocation: 8 GB
 - Storage Allocation: TBA
-- Cores: 1
+- Cores: 2
 - Sockets: 1
     - Plex/Jellyfin: 4 GB
     - Sonarr/Radarr: 2 GB
@@ -47,7 +47,7 @@ Physical Hardware
 - OS: Debian 13
 - Total Memory Allocation: 8 GB
 - Storage Allocation: 450 GB
-- Cores: 1
+- Cores: 3
 - Sockets: 1
     - Nextcloud: Primary storage user; will consume most of the 500 GB for file storage.
     - Duplicati: Backs up data, requiring minimal local storage for its database.
