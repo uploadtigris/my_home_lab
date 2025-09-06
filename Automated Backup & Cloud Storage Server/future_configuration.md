@@ -30,7 +30,7 @@
 - **Use case**: Sync specific folders between devices, distributed backup copies
 
 ## Prerequisites
-- Ubuntu Server 24.04 LTS installed
+- Debian 13 Stable installed
 - Minimum 2 drives (for RAID configuration)
 - UPS for power protection
 - Static IP or DDNS setup
