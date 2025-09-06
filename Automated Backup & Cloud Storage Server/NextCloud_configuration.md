@@ -12,33 +12,38 @@
 # Update system
 sudo apt update && sudo apt upgrade -y
 
-# Configure firewall
+# Configure firewall (UFW: Uncomplicated Firewall)
+sudo apt install ufw -y
 sudo ufw enable
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow ssh
-sudo ufw allow 8080  # Nextcloud
-sudo ufw allow 8200  # Duplicati
+sudo ufw allow 80   # HTTP
+sudo ufw allow 443  # HTTPS
 
 # Disable root login
 sudo sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
 sudo systemctl restart sshd
 
-# Install fail2ban
+# Install fail2ban (intrusion prevention software designed to protect servers from brute-force attacks)
 sudo apt install fail2ban -y
 sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
 ```
 
 ### Nextcloud
 ```bash
 # Install dependencies
-sudo apt install apache2 mariadb-server php php-mysql php-xml php-gd php-curl php-mbstring php-zip unzip -y
+sudo apt install apache2 mariadb-server libapache2-mod-php \
+php php-mysql php-xml php-gd php-curl php-mbstring php-zip php-intl \
+php-bcmath php-gmp unzip wget -y
 
 # Secure MariaDB
 sudo mysql_secure_installation
 
 # Create database
 sudo mysql -u root -p
+
 CREATE DATABASE nextcloud;
 CREATE USER 'nextcloud'@'localhost' IDENTIFIED BY 'strong_password_here';
 GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextcloud'@'localhost';
@@ -55,8 +60,27 @@ sudo chmod -R 755 /var/www/html/nextcloud/
 
 # Configure Apache virtual host
 sudo nano /etc/apache2/sites-available/nextcloud.conf
-# Add Nextcloud configuration (see Nextcloud documentation)
+```
+Past this in
+```
+<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    DocumentRoot /var/www/html/nextcloud
+    ServerName yourdomain.com
+
+    <Directory /var/www/html/nextcloud/>
+        Options +FollowSymlinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/nextcloud_error.log
+    CustomLog ${APACHE_LOG_DIR}/nextcloud_access.log combined
+</VirtualHost>
+```
+``` bash
+# Add Nextcloud configuration ; Enable site + required Apache modules:
 sudo a2ensite nextcloud.conf
-sudo a2enmod rewrite
-sudo systemctl restart apache2
+sudo a2enmod rewrite headers env dir mime ssl
+sudo systemctl reload apache2
 ```
