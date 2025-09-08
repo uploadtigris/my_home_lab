@@ -56,6 +56,13 @@ Dynamic DNS (DDNS) &rarr; dynamic IP
 
 > In short, DDNS allows you to access a computer at home via RDP even if your IP address changes. It does this by pairing the computers new IP to an alias like "tigrishomeserver.ddns.org".
 
+### Steps:
+1) Reserve the VMs IP in the DHCP reservation settings of the router
+  - Use the MAC address of the VM’s virtual NIC (you can find this in Proxmox → VM → Hardware → Network Device)
+2) Sign in to your DNS Resolver service
+  - Enable Dynamic DNS in the service settings as this will have the hostname always point to the latest ISP IPv4 address
+  - follow steps to create DDNS hostname, sign in on the Router
+
 #TODO: Configure DDNS for: \
 [ ] uploadtigris website \
 [ ] alexis's website \
