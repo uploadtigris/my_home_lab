@@ -7,6 +7,10 @@
 - Can integrate with external storage backends
 - **Use case**: Primary file storage, document collaboration, photo backup
 
+### SSH Access
+1. Access the VM via ```ssh username_on_VM@IPv4_adress```
+2. to get admin powers type ```sudo -i```
+
 ### System Hardening
 ```bash
 # Update system
