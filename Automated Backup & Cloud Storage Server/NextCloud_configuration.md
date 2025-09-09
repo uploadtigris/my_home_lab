@@ -99,16 +99,10 @@ Check Status
 ```
 sudo systemctl status apache2
 ```
-
 Confirm Nextcloud files exist
 ```
 ls -l /var/www/html/nextcloud
 ```
 
-
-### Operations
-Check Status
-```
-sudo systemctl status apache2
-```
+# TODO: Link the IP to a outward facing domain so that I can access it from outside the house
 
