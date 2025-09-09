@@ -92,3 +92,23 @@ sudo a2ensite nextcloud.conf
 sudo a2enmod rewrite headers env dir mime
 sudo systemctl restart apache2
 ```
+
+### Confirmation
+
+Check Status
+```
+sudo systemctl status apache2
+```
+
+Confirm Nextcloud files exist
+```
+ls -l /var/www/html/nextcloud
+```
+
+
+### Operations
+Check Status
+```
+sudo systemctl status apache2
+```
+
