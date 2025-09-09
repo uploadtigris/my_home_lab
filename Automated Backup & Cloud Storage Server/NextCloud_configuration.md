@@ -12,7 +12,7 @@
 2. to get admin powers type ```sudo -i```
 3. To make the ssh name shorter like ```tigris@storage```:
        - ```sudo nano /etc/hosts``` \
-       - add this line at the bottom of the file ~>```{your ipv4 address} {name you want}``` \ ~> press ctrl+x, y, enter\
+       - add this line at the bottom of the file ~>```{your ipv4 address} {name you want}``` ~> press ctrl+x, y, enter\
        - ```ssh user@chosen_name```
 
 ### System Hardening
