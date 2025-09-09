@@ -16,15 +16,15 @@ Proxmox VE chosen for its purpose-built design and enterprise-grade virtualizati
 ```
 Physical Hardware
 └── Proxmox VE (Host OS - Debian-based)
-    ├── VM 1: Ubuntu Server 24.04 LTS (Media Server)
+    ├── VM 1: Debian 13 (Media Server)
     │   ├── Plex/Jellyfin
     │   ├── Sonarr/Radarr  
     │   └── qBittorrent
-    ├── VM 2: Ubuntu Server 24.04 LTS (Storage Server)
+    ├── VM 2: Debian 13 (Storage Server)
     │   ├── Nextcloud
     │   ├── Duplicati
     │   └── Syncthing
-    └── VM 3: Ubuntu Server 24.04 LTS (Network Services)
+    └── VM 3: Debian 13 (Network Services)
         ├── Pi-hole
         ├── Nginx Proxy Manager
         └── Uptime Kuma
