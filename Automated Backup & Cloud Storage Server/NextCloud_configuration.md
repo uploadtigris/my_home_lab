@@ -104,5 +104,5 @@ Confirm Nextcloud files exist
 ls -l /var/www/html/nextcloud
 ```
 
-# TODO: Link the IP to a outward facing domain so that I can access it from outside the house
+#TODO: Link the IP to a outward facing domain so that I can access it from outside the house
 
