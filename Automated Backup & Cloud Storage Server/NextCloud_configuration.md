@@ -89,6 +89,6 @@ Paste this in
 ``` bash
 # Add Nextcloud configuration ; Enable site + required Apache modules:
 sudo a2ensite nextcloud.conf
-sudo a2enmod rewrite headers env dir mime ssl
-sudo systemctl reload apache2
+sudo a2enmod rewrite headers env dir mime
+sudo systemctl restart apache2
 ```
