@@ -69,7 +69,7 @@ sudo chmod -R 755 /var/www/html/nextcloud/
 # Configure Apache virtual host
 sudo nano /etc/apache2/sites-available/nextcloud.conf
 ```
-Past this in
+Paste this in
 ```
 <VirtualHost *:80>
     ServerAdmin admin@example.com
