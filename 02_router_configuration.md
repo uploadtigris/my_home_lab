@@ -63,9 +63,3 @@ Dynamic DNS (DDNS) &rarr; dynamic IP
   - Enable Dynamic DNS in the service settings as this will have the hostname always point to the latest ISP IPv4 address
   - follow steps to create DDNS hostname, sign in on the Router
 
-#TODO: Configure DDNS for: \
-[ ] uploadtigris website \
-[ ] alexis's website \
-[ ] nextcloud \
-[ ] jellyfin \
-[ ] home security camera service
