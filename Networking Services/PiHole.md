@@ -1,3 +1,5 @@
+<img src="https://github.com/uploadtigris/my_home_lab/blob/49fb60ccae3545049b0c0fe2f63fb86a591cfb1b/images/Pi-hole_vector_logo.svg.png" width="150">
+
 # Pi-hole Setup Guide
 
 ## Overview
@@ -6,6 +8,7 @@
 Pi-hole is a DNS sinkhole that runs on a Raspberry Pi, blocking ads and trackers at the network level. It sits between your devices and DNS servers, filtering requests against block lists before forwarding legitimate queries.
 
 [Official Reference](https://www.raspberrypi.com/tutorials/running-pi-hole-on-a-raspberry-pi/)
+
 [Pi-Hole](https://pi-hole.net/)
 
 ---
@@ -155,8 +158,4 @@ http://192.168.1.224/admin
 
 ✅ Pi-hole is now running and blocking ads across your network!
 
----
-
-## Images
-
-[Add your screenshots here]
+<img src="https://github.com/uploadtigris/my_home_lab/blob/49fb60ccae3545049b0c0fe2f63fb86a591cfb1b/images/Screenshot%20from%202025-11-23%2006-24-20.png" width="500">
