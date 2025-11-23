@@ -6,6 +6,7 @@
 Pi-hole is a DNS sinkhole that runs on a Raspberry Pi, blocking ads and trackers at the network level. It sits between your devices and DNS servers, filtering requests against block lists before forwarding legitimate queries.
 
 [Official Reference](https://www.raspberrypi.com/tutorials/running-pi-hole-on-a-raspberry-pi/)
+[Pi-Hole](https://pi-hole.net/)
 
 ---
 
