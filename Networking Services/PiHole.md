@@ -158,4 +158,4 @@ http://192.168.1.224/admin
 
 ✅ Pi-hole is now running and blocking ads across your network!
 
-<img src="https://github.com/uploadtigris/my_home_lab/blob/49fb60ccae3545049b0c0fe2f63fb86a591cfb1b/images/Screenshot%20from%202025-11-23%2006-24-20.png" width="500">
+<img src="https://github.com/uploadtigris/my_home_lab/blob/49fb60ccae3545049b0c0fe2f63fb86a591cfb1b/images/Screenshot%20from%202025-11-23%2006-24-20.png" width="700">
