@@ -77,10 +77,12 @@ sudo nmap -sn 192.168.1.0/24
 # Look for "Rivet Networks" or "Raspberry Pi"
 ```
 
+For the rest of this example, we will use the IP address 192.168.1.222 --> This address will likely be different for your own device.
+
 Connect via SSH:
 
 ```bash
-ssh username@192.168.1.x
+ssh username@192.168.1.222
 # Enter your password when prompted
 ```
 
@@ -111,7 +113,7 @@ Follow the automated installer prompts with these configurations:
 Set a static IP address for your Pi:
 
 ```bash
-sudo nmcli connection modify "Wired connection 1" ipv4.addresses 192.168.1.224/24 ipv4.gateway 192.168.1.1 ipv4.dns "8.8.8.8,8.8.4.4" ipv4.method manual
+sudo nmcli connection modify "Wired connection 1" ipv4.addresses 192.168.1.222/24 ipv4.gateway 192.168.1.1 ipv4.dns "8.8.8.8,8.8.4.4" ipv4.method manual
 sudo nmcli connection down "Wired connection 1" && sudo nmcli connection up "Wired connection 1"
 ```
 
@@ -119,7 +121,7 @@ sudo nmcli connection down "Wired connection 1" && sudo nmcli connection up "Wir
 
 **First Command - Configure Network Settings:**
 - `sudo nmcli connection modify "Wired connection 1"` - Modifies the network connection named "Wired connection 1" with root privileges
-- `ipv4.addresses 192.168.1.224/24` - Sets the static IP address to 192.168.1.224 with a subnet mask of 255.255.255.0 (/24)
+- `ipv4.addresses 192.168.1.222/24` - Sets the static IP address to 192.168.1.222 with a subnet mask of 255.255.255.0 (/24)
 - `ipv4.gateway 192.168.1.1` - Sets the default gateway (your router's IP address)
 - `ipv4.dns "8.8.8.8,8.8.4.4"` - Sets DNS servers to Google's public DNS (used as fallback)
 - `ipv4.method manual` - Changes from DHCP (automatic) to manual IP configuration
@@ -143,13 +145,13 @@ sudo pihole setpassword
 
 ## Step 7: Configure Your Router
 
-Set your router's DNS server to point to your Pi's IP address (192.168.1.224). This ensures all devices on your network use Pi-hole for DNS queries.
+Set your router's DNS server to point to your Pi's IP address (192.168.1.222). This ensures all devices on your network use Pi-hole for DNS queries.
 
 **Note**: The Raspberry Pi is connected to the router via Ethernet (RJ45) for stable connectivity.
 
 Access the Pi-hole admin console by navigating to:
 ```
-http://192.168.1.224/admin
+http://192.168.1.222/admin
 ```
 
 ---
