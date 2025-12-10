@@ -161,3 +161,9 @@ http://192.168.1.222/admin
 ✅ Pi-hole is now running and blocking ads across your network!
 
 <img src="https://github.com/uploadtigris/my_home_lab/blob/49fb60ccae3545049b0c0fe2f63fb86a591cfb1b/images/Screenshot%20from%202025-11-23%2006-24-20.png" width="700">
+
+Update 12/9/25: 
+- Everything is going smoothly! I have added the [HaGeZi's Pro DNS Blocklist](https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/adblock/pro.txt) which added 173,118 blocked domains to total.
+- This project has significantly sped up my internet experience at home.
+
+<img src="https://github.com/uploadtigris/my_home_lab/blob/main/images/Screenshot_20251209_231222.png" width="700">
