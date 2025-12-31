@@ -6,3 +6,15 @@ Have a Web GUI (uploadtigris.com) with applications that using Route53, route me
 - can log in as user
 - can save custom themes for login page
 
+------------------------------------------------------------
+
+Step up desktop as a server
+- 16 GB Ram
+- Radeon 580 GPU
+- 2, 2 TB Drives for storage (mirrored)
+
+[X] Pi-Hole
+[ ] Pfsense
+[ ] Jellyfin --> ripping CDs project
+[ ] Paperless NGX
+[ ] Next Cloud
