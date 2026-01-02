@@ -1,6 +1,5 @@
 # Configuring hardrives for continuous backup mode (ZFS RAID1)
 
-````markdown
 # Mirroring Drives using ZFS
 
 The homelab is going into full swing. I have two 2TB Seagate HDD drives I want to set up in a mirror configuration using my homelab setup running Proxmox.
@@ -216,5 +215,3 @@ rsync -avh --progress /mnt/backup/ /mnt/zfsdata/
 * Fully mirrored ZFS RAID1 pool is created
 * Ready to attach to Proxmox for VMs, containers, or backups
 * Will be used for self-hosted services like NextCloud for photos and documents
-
-```
