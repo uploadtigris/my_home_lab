@@ -1,8 +1,8 @@
-# Configuring hardrives for continuous backup mode (ZFS RAID1)
-
 # Mirroring Drives using ZFS
 
 The homelab is going into full swing. I have two 2TB Seagate HDD drives I want to set up in a mirror configuration using my homelab setup running Proxmox.
+
+"Mirroring" these drives with the RAID1 configuration means that if one drive goes bad, there is a full copy of the data on the other. 
 
 ---
 
