@@ -34,7 +34,7 @@ nvme0n1            465.8G Samsung SSD 970 EVO 500GB
     └─pve-data     337.9G
 ```
 
-> The drives are currently NTFS, which is not ideal for Proxmox. We need to back up the data first.
+> The drives are currently NTFS, which is not ideal for Proxmox. We need to back up the data first before we convert them into a ZFS pool, which works well with Proxmox.
 
 ---
 
