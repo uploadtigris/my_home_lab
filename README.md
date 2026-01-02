@@ -3,6 +3,7 @@
 ## Platform
 
 **Hardware:** ...
+
 **Hypervisor:** Proxmox Virtual Environment (VE)  
 **Management:** Web interface via LAN connection
 
