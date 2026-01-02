@@ -1,8 +1,22 @@
+# Configuring hardrives for continuous backup mode (ZFS RAID1)
+
+````markdown
 # Mirroring Drives using ZFS
 
-The homelab is going into full swing. I have two 2TB seagate HDD drives I want to set up in a mirror configuration using my homelab setup running Proxmox.
+The homelab is going into full swing. I have two 2TB Seagate HDD drives I want to set up in a mirror configuration using my homelab setup running Proxmox.
 
-First we check the filesystem with `lsblk -o NAME,SIZE,MODEL` in the proxmox shell
+---
+
+## 1. Check Existing Drives
+
+Check the current drives and partitions:
+
+```bash
+lsblk -o NAME,SIZE,MODEL
+````
+
+Example output:
+
 ```
 sda                  1.8T ST2000DM008-2UB102
 └─sda2               1.8T 
@@ -20,57 +34,56 @@ nvme0n1            465.8G Samsung SSD 970 EVO 500GB
   └─pve-data_tdata 337.9G 
     └─pve-data     337.9G
 ```
-Unfortunately, the drives are formatted as NTFS which does not work well with Proxmox. So, I need to move the data from sdb to another drive so I can format these drives correctly.
 
-Through some checking, found that sda is the drive with the items we would like to keep
-```
+> The drives are currently NTFS, which is not ideal for Proxmox. We need to back up the data first.
+
+---
+
+## 2. Mount the Source Drive
+
+Mount `/dev/sda2` to access the files:
+
+```bash
 mkdir -p /mnt/check
 mount -t ntfs-3g /dev/sda2 /mnt/check
 df -h /mnt/check
 ```
+
+Example output:
+
 ```
-root@myhomelab:~# df -h /mnt/check
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/sdb2       1.9T   58G  1.8T   4% /mnt/check
 ```
-So, we prepare another drive `sdc` to copy the files to from sdb
 
-## Backing up the data
+---
 
-```
-# Make sure the drive is unmounted
+## 3. Prepare the Backup Drive
+
+Format and mount `/dev/sdc` as ext4:
+
+```bash
 umount /dev/sdc1
-
-# Create a new ext4 filesystem
 mkfs.ext4 -L BackupDrive /dev/sdc
-
-# Create a mount point
 mkdir -p /mnt/backup
-
-# Mount it
 mount /dev/sdc /mnt/backup
-
-# Check free space
 df -h /mnt/backup
 ```
-```
-df -h /mnt/backup
-```
-The drive is verified!
 
-Now, we make sure that both drives are mounted
-```
-# mounting the drive to be copied over 
-mkdir -p /mnt/check
+---
 
-# showing contents
+## 4. Verify Source and Destination
+
+Check contents of the source:
+
+```bash
 df -h /mnt/check
 ls -l /mnt/check
+```
+
+Example:
 
 ```
-```
-root@myhomelab:~# df -h /mnt/check
-ls -l /mnt/check
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/sdb2       1.9T   58G  1.8T   4% /mnt/check
 total 24
@@ -85,74 +98,80 @@ drwxrwxrwx 1 root root 4096 Aug  4 12:19  wallpapers
 drwxrwxrwx 1 root root 4096 Aug  4 12:21  writing
 ```
 
-Copying files
-`rsync -avh --progress /mnt/check/ /mnt/backup/`
+---
 
-Verifying
+## 5. Copy Data to Backup Drive
+
+```bash
+rsync -avh --progress /mnt/check/ /mnt/backup/
 ```
-# the sizes of each should roughly match
+
+Verify sizes:
+
+```bash
 du -sh /mnt/check
 du -sh /mnt/backup
 ```
 
-# Formatting the 2 Seagate drives to ZFS
-Check for mounted drives
-```
+---
+
+## 6. Wipe Old Drives for ZFS
+
+Check for mounted drives:
+
+```bash
 mount | grep sda
 mount | grep sdb
 ```
-Unmount anything seen
-```
+
+Unmount if necessary:
+
+```bash
 umount /dev/sda*
 umount /dev/sdb*
 ```
-Wipe it all
-```
+
+Wipe filesystem signatures:
+
+```bash
 wipefs -a /dev/sda
 wipefs -a /dev/sdb
 ```
-Confirm everything is wiped
-```
+
+Confirm drives are clean:
+
+```bash
 lsblk -f
 wipefs /dev/sda
 wipefs /dev/sdb
 ```
-```
-root@myhomelab:~# lsblk -f
-wipefs /dev/sda
-wipefs /dev/sdb
-NAME               FSTYPE      FSVER    LABEL       UUID                                   FSAVAIL FSUSE% MOUNTPOINTS
-sda                                                                                                       
-sdb                                                                                                       
-└─sdb2                                                                                                    
-sdc                ext4        1.0      BackupDrive c46669d8-2b6a-4e0f-8306-f78630f984f9    812.1G     6% /mnt/backup
-                                                                                                          /mnt/backup
-nvme0n1                                                                                                   
-├─nvme0n1p1                                                                                               
-├─nvme0n1p2        vfat        FAT32                9BD3-253C                              1013.2M     1% /boot/efi
-└─nvme0n1p3        LVM2_member LVM2 001             rUywmC-AcfP-5FgO-Mpu3-U2dn-mxCZ-KObpkx                
-  ├─pve-swap       swap        1                    cc679a3f-cf0f-42be-9313-047645cdae40                  [SWAP]
-  ├─pve-root       ext4        1.0                  1709ac70-5194-40b4-b818-ec7cfdfe3af5     84.1G     5% /
-  ├─pve-data_tmeta                                                                                        
-  │ └─pve-data                                                                                            
-  └─pve-data_tdata                                                                                        
-    └─pve-data
-```
 
-1) create the ZFS mirror
-```
+---
+
+## 7. Create ZFS Mirror
+
+```bash
 zpool create -f -o ashift=12 zfspool mirror /dev/sda /dev/sdb
 ```
-2) Verify the ZFS pool
-```
+
+* `zfspool` is the name of the ZFS pool
+* `mirror /dev/sda /dev/sdb` sets up RAID1
+* `ashift=12` optimizes for 4K sector drives
+* `-f` forces creation (erases everything)
+
+---
+
+## 8. Verify ZFS Pool
+
+```bash
 zpool status
 zpool list
 zfs list
 ```
+
+Example output:
+
 ```
-root@myhomelab:~# zpool status
-zpool list
-zfs list
   pool: zfspool
  state: ONLINE
 config:
@@ -164,32 +183,38 @@ config:
             sdb     ONLINE       0     0     0
 
 errors: No known data errors
+
 NAME      SIZE  ALLOC   FREE  CKPOINT  EXPANDSZ   FRAG    CAP  DEDUP    HEALTH  ALTROOT
 zfspool  1.81T   420K  1.81T        -         -     0%     0%  1.00x    ONLINE  -
+
 NAME      USED  AVAIL  REFER  MOUNTPOINT
 zfspool   420K  1.76T    96K  /zfspool
 ```
-setting mount point --> This will automatically mount the pool at /mnt/zfsdata
-```
+
+---
+
+## 9. Set Mountpoint for ZFS Pool
+
+```bash
 zfs set mountpoint=/mnt/zfsdata zfspool
 ```
 
-Copying data back
-```
+* Now the pool is accessible at `/mnt/zfsdata`
+
+---
+
+## 10. Restore Backup Data
+
+```bash
 rsync -avh --progress /mnt/backup/ /mnt/zfsdata/
 ```
 
-### DONE!
+---
 
-- Now I have a fully mirrored ZFS RAID1 pool
-- I will now attach this ZFS pool to Proxmox to be used by my self hosted services, which will include NextCloud for photo & document cloud storage!
+### ✅ Done!
 
+* Fully mirrored ZFS RAID1 pool is created
+* Ready to attach to Proxmox for VMs, containers, or backups
+* Will be used for self-hosted services like NextCloud for photos and documents
 
-
-
-
-
-
-
-
-
+```
