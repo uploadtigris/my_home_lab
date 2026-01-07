@@ -12,9 +12,10 @@ Step up desktop as a server
 - 16 GB Ram
 - Radeon 580 GPU
 - 2, 2 TB Drives for storage (mirrored)
+- OS: ProxMox (VM1: Ubuntu Server running Grafana)
 
-[X] Pi-Hole
-[ ] Pfsense
-[ ] Jellyfin --> ripping CDs project
-[ ] Paperless NGX
-[ ] Next Cloud
+[X] Pi-Hole \
+[ ] Pfsense \
+[ ] TrueNAS \
+[ ] Jellyfin --> ripping CDs project \
+[ ] Next Cloud 
