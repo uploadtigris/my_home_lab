@@ -14,6 +14,8 @@ Step up desktop as a server
 - 2, 2 TB Drives for storage (mirrored)
 - OS: ProxMox (VM1: Ubuntu Server running Grafana)
 
+------------------------------------------------------------
+
 [X] Pi-Hole \
 [ ] Pfsense \
 [ ] TrueNAS \
