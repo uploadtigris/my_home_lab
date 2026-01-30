@@ -32,11 +32,11 @@ Laptop as a Test Environment
 ------------------------------------------------------------
 AWS
 Build Manual First > IaC using Terraform
-[ ] Three tier web application (web server - EC2, application - EC2/Lambda, database tier - RDS) with application load balancer
-[ ] Make it highly available ( multiple AZs, auto scaling groups, RDS Multi-AZ, Route 53 for DNS failover.
-[ ] Serverless ( build something with API Gateway, Lambda, and DynamoDB ) + S3 static hosting // CloudFront for distribution
-[ ] Hybrid cloud connections ~ set up a VPN connection b/w homelab and the VPC. ( VPC peering, Transit Gateway, Direct Connect concepts )
-[ ] Security and compliance ~ IAM roles and policies, CloudTrail, KMS Encryption, AWS config rules, AWS Systems Manager
-[ ] Cost Optimization ~ Cost Explorer, billing alarms, S3 lifecycle policies, EC2 instance sizing, Reserved instances and savings plans (go hard in this, use that economics brain)
-[ ] IaC - Build things in CloudFormation && Terraform
+[ ] Three tier web application (web server - EC2, application - EC2/Lambda, database tier - RDS) with application load balancer\
+[ ] Make it highly available ( multiple AZs, auto scaling groups, RDS Multi-AZ, Route 53 for DNS failover.\
+[ ] Serverless ( build something with API Gateway, Lambda, and DynamoDB ) + S3 static hosting // CloudFront for distribution\
+[ ] Hybrid cloud connections ~ set up a VPN connection b/w homelab and the VPC. ( VPC peering, Transit Gateway, Direct Connect concepts )\
+[ ] Security and compliance ~ IAM roles and policies, CloudTrail, KMS Encryption, AWS config rules, AWS Systems Manager\
+[ ] Cost Optimization ~ Cost Explorer, billing alarms, S3 lifecycle policies, EC2 instance sizing, Reserved instances and savings plans (go hard in this, use that economics brain)\
+[ ] IaC - Build things in CloudFormation && Terraform\
 
