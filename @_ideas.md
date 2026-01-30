@@ -27,7 +27,7 @@ Laptop as a Test Environment
 [ ] Pfsense \
 [ ] DDNS \
 [ ] Next Cloud \
-[ ] Ngnix web hosting\
+[ ] Ngnix web hosting
 
 ------------------------------------------------------------
 AWS
