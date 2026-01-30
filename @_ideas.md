@@ -21,7 +21,7 @@ Laptop as a Test Environment
 
 ------------------------------------------------------------
 
-!Begin to make documents for the setup and automation of each servce
+!Begin to make documents for the setup and automation of each service
 
 [X] Pi-Hole \
 [ ] Pfsense \
@@ -32,6 +32,7 @@ Laptop as a Test Environment
 ------------------------------------------------------------
 AWS
 Build Manual First > IaC using Terraform
+
 [ ] Three tier web application (web server - EC2, application - EC2/Lambda, database tier - RDS) with application load balancer \
 [ ] Make it highly available ( multiple AZs, auto scaling groups, RDS Multi-AZ, Route 53 for DNS failover. \
 [ ] Serverless ( build something with API Gateway, Lambda, and DynamoDB ) + S3 static hosting // CloudFront for distribution \
