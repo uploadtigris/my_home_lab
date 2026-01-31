@@ -1,0 +1,22 @@
+---
+all:
+  children:
+    production:
+      hosts:
+        desktop:
+          ansible_host: 192.168.1.10
+        proxmox:
+          ansible_host: 192.168.1.11
+    
+    development:
+      hosts:
+        thinkpad:
+          ansible_host: 192.168.1.20
+
+    webservers:
+      hosts:
+        desktop:
+
+    monitoring:
+      hosts:
+        desktop:

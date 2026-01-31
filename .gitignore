@@ -1,0 +1,48 @@
+# Ansible
+*.retry
+group_vars/vault.yml
+host_vars/vault.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Secrets and credentials
+*.key
+*.pem
+*_rsa
+*_rsa.pub
+secrets/
+credentials/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Backups
+*.bak
+*.backup
+
+# Personal notes that shouldn't be committed
+PRIVATE.md
+TODO-personal.md

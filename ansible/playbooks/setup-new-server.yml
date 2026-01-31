@@ -1,0 +1,27 @@
+---
+- name: Setup new server with common configuration
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: Update all packages
+      dnf:
+        name: "*"
+        state: latest
+      when: ansible_os_family == "RedHat"
+    
+    - name: Install common packages
+      dnf:
+        name: "{{ common_packages }}"
+        state: present
+      when: ansible_os_family == "RedHat"
+    
+    - name: Set timezone
+      timezone:
+        name: "{{ timezone }}"
+    
+    - name: Ensure firewalld is running
+      systemd:
+        name: firewalld
+        state: started
+        enabled: yes

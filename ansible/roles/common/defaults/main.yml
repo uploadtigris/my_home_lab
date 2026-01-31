@@ -1,0 +1,12 @@
+---
+# Default variables for common role
+
+common_packages:
+  - vim
+  - git
+  - htop
+  - curl
+  - wget
+  - tmux
+
+timezone: America/Chicago
