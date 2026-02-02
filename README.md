@@ -1,42 +1,73 @@
-# Homelab & Linux Certification Journey
+# Homelab & Cloud Certification Journey
 
-> A hands-on learning environment for RHCSA/RHCE certification preparation, infrastructure automation, and cloud engineering practice.
+> A hands-on learning environment for Security+, Azure administration, and Infrastructure-as-Code with Terraform. Building practical cybersecurity and cloud engineering skills through real-world implementations.
 
 ## 🎯 Mission
 
-This repository documents my journey toward Red Hat certification and practical infrastructure automation skills. The homelab serves as a production-like environment for learning enterprise Linux administration, Ansible automation, and hybrid cloud architectures.
+This repository documents my journey toward industry-recognized certifications in cybersecurity and cloud infrastructure. The homelab serves as a production-like environment for learning security fundamentals, Azure cloud administration, and infrastructure automation with Terraform.
 
 ## 📚 Learning Roadmap
 
-### Current Focus: RHCSA Preparation (Weeks 1-12)
+### Phase 1: Security+ Certification (Weeks 1-8)
 
-**Core Skills Development:**
-- Linux system administration fundamentals
-- Storage management (LVM, partitions, file systems)
-- User and permission management
-- Network configuration and firewall management
-- SELinux implementation and troubleshooting
-- Systemd service management
-- Automated task scheduling
+**Core Competencies:**
+- **Threats, Attacks & Vulnerabilities:** Attack types, threat actors, vulnerability assessment
+- **Architecture & Design:** Security architecture, secure network design, cloud security
+- **Implementation:** Secure protocols, identity management, PKI, cryptography
+- **Operations & Incident Response:** Security tools, incident response, digital forensics
+- **Governance, Risk & Compliance:** Policies, frameworks, risk management, compliance
 
 **Study Resources:**
-- *The Linux Bible* by Christopher Negus
-- *How Linux Works* by Brian Ward
-- Red Hat Official Documentation
-- Hands-on lab practice in Proxmox VMs
+- Professor Messer's Security+ Course
+- CompTIA Security+ Official Study Guide
+- TryHackMe / HackTheBox practice labs
+- Hands-on security implementations in homelab
 
-### Next Phase: RHCE Preparation (Weeks 13-20)
+**Homelab Security Projects:**
+- Pi-hole with security-focused DNS filtering
+- pfSense firewall with IDS/IPS configuration
+- VPN implementation for secure remote access
+- SSL/TLS certificate management
+- Security monitoring and log analysis
 
-**Automation Focus:**
-- Ansible fundamentals and playbook development
-- Role-based automation architecture
-- Template management with Jinja2
-- Ansible Vault for secrets management
-- Infrastructure-as-Code best practices
-- Automated configuration management across multiple systems
+### Phase 2: Azure Administrator (AZ-104) (Weeks 9-16)
+
+**Azure Core Skills:**
+- **Identity & Governance:** Azure AD, RBAC, Azure Policy, subscriptions
+- **Storage:** Storage accounts, blob storage, file shares, backup solutions
+- **Compute:** Virtual machines, containers, Azure App Service
+- **Networking:** VNets, NSGs, load balancers, VPN Gateway, Azure DNS
+- **Monitoring:** Azure Monitor, Log Analytics, Application Insights
+
+**Study Resources:**
+- Microsoft Learn AZ-104 Learning Path
+- Azure Documentation and Quickstarts
+- Azure Sandbox environments
+- John Savill's Azure Master Class
+- Hands-on Azure deployments
+
+**Homelab-to-Cloud Integration:**
+- Hybrid connectivity (Site-to-Site VPN)
+- Azure backup for on-premises resources
+- Azure monitoring for homelab services
+- Cost-optimized cloud resource deployment
+
+### Phase 3: HashiCorp Terraform Associate (Weeks 17-24)
+
+**Infrastructure-as-Code Mastery:**
+- Terraform fundamentals and HCL syntax
+- State management and backends
+- Modules and reusable components
+- Multi-cloud deployments (Azure primary)
+- Terraform Cloud/Enterprise workflows
+- Security and secrets management
 
 **Practical Application:**
-All homelab services will be deployed and managed via Ansible playbooks, documented in this repository.
+- All Azure infrastructure deployed via Terraform
+- Modular, reusable code architecture
+- CI/CD integration with GitHub Actions
+- State management with Azure Storage
+- Documentation-as-code practices
 
 ---
 
@@ -56,12 +87,13 @@ Hypervisor: Proxmox VE
 ```
 
 **Virtual Machines:**
-- **VM1:** Ubuntu Server (Monitoring Stack - Grafana, Prometheus)
-- **VM2:** AlmaLinux 9 (RHEL-compatible for RHCE practice)
+- **VM1:** Ubuntu Server (Security monitoring - Wazuh/OSSEC, Pi-hole)
+- **VM2:** pfSense (Firewall, VPN, IDS/IPS)
+- **VM3:** Ubuntu Server (Web services, reverse proxy)
 
 #### Test Environment (Thinkpad W541)
 ```
-Role: Learning Lab & Experimentation
+Role: Learning Lab & Security Testing
 Model: Thinkpad W541
 CPU: Intel Core i7-4xxx (quad-core)
 RAM: 32 GB DDR3
@@ -70,220 +102,209 @@ Hypervisor: Proxmox VE
 ```
 
 **Purpose:**
-- RHCSA/RHCE hands-on practice environment
-- Multi-VM scenarios for Ansible automation
-- Snapshot-based learning (test, break, restore)
-- Cross-distribution testing
+- Security testing and vulnerability assessment
+- Azure hybrid cloud testing
+- Terraform deployment validation
+- Snapshot-based experimentation
 
 ---
 
 ## 🚀 Homelab Services
 
-### Phase 1: Core Infrastructure (In Progress)
-- [x] **Pi-hole** - Network-wide ad blocking and DNS
-- [ ] **pfSense** - Firewall and router
-- [ ] **Dynamic DNS** - Remote access configuration
-- [ ] **Nginx** - Reverse proxy and web server
-- [ ] **Nginx Proxy Manager** - GUI-based proxy management
+### Phase 1: Security Foundation (In Progress)
+- [x] **Pi-hole** - DNS-level ad blocking and security filtering
+- [ ] **pfSense** - Enterprise firewall with IDS/IPS (Suricata/Snort)
+- [ ] **OpenVPN/WireGuard** - Secure remote access VPN
+- [ ] **Nginx** - Reverse proxy with SSL/TLS termination
+- [ ] **Fail2Ban** - Intrusion prevention system
 
-### Phase 2: Self-Hosted Applications
-- [ ] **Nextcloud** - Private cloud storage
-- [ ] **Plex Media Server** - Media streaming
-- [ ] **Grafana + Prometheus** - Infrastructure monitoring
-- [ ] **Homepage/Dashboard** - Unified service access portal
+### Phase 2: Security Monitoring & Compliance
+- [ ] **Wazuh** - Security monitoring and SIEM
+- [ ] **Graylog/ELK Stack** - Centralized log management
+- [ ] **Uptime Kuma** - Service availability monitoring
+- [ ] **Vault** - Secrets management (learning HashiCorp ecosystem)
+- [ ] **Certificate Authority** - Internal PKI infrastructure
 
-### Phase 3: Advanced Services
-- [ ] **GitLab CE** - Self-hosted Git repository
-- [ ] **Vault** - Secrets management
+### Phase 3: Cloud-Integrated Services
+- [ ] **Azure Backup** - Hybrid backup solution
+- [ ] **Azure Monitor Agent** - Cloud-based monitoring
+- [ ] **Azure File Sync** - Hybrid file services
+- [ ] **Azure Arc** - Hybrid server management
+- [ ] **Nextcloud** - Self-hosted cloud storage with Azure backup
+
+### Phase 4: Production Applications
+- [ ] **GitLab CE** - Self-hosted Git with CI/CD
 - [ ] **Portainer** - Container management
-- [ ] **Uptime Kuma** - Service monitoring
+- [ ] **Grafana + Prometheus** - Infrastructure visualization
+- [ ] **Homepage Dashboard** - Unified service portal
 
 ### Web Portal: uploadtigris.com
-A custom authentication portal with Route53 DNS routing to self-hosted services:
-- User authentication system
-- Custom theme support
+Authentication portal with Azure AD integration and Terraform-managed DNS:
+- Azure AD SSO integration
+- Route53/Azure DNS managed via Terraform
+- Custom authentication with security hardening
 - Service discovery dashboard
-- Dynamic routing to internal services
+- SSL/TLS with automated certificate renewal
 
 ---
 
-## 🤖 Ansible Automation Strategy
+## ☁️ Azure Cloud Architecture
 
-All infrastructure will be managed as code using Ansible. The repository structure follows best practices:
+All Azure resources will be deployed and managed using Terraform:
 
 ```
-ansible/
-├── inventories/
-│   ├── production/
-│   └── development/
-├── playbooks/
-│   ├── site.yml
-│   ├── proxmox-setup.yml
-│   ├── pihole-deploy.yml
-│   ├── monitoring-stack.yml
-│   └── web-services.yml
-├── roles/
-│   ├── common/
-│   ├── pihole/
-│   ├── nginx/
-│   ├── nextcloud/
+terraform/
+├── environments/
+│   ├── dev/
+│   ├── staging/
+│   └── production/
+├── modules/
+│   ├── networking/
+│   ├── compute/
+│   ├── storage/
+│   ├── security/
 │   └── monitoring/
-├── group_vars/
-├── host_vars/
-└── ansible.cfg
+├── main.tf
+├── variables.tf
+├── outputs.tf
+└── terraform.tfvars.example
 ```
 
-### Automation Goals (RHCE Practice)
-1. **Idempotent deployments** - Services can be safely re-run
-2. **Role-based organization** - Reusable, modular components
-3. **Templated configurations** - Dynamic config generation
-4. **Encrypted secrets** - Ansible Vault for sensitive data
-5. **Multi-environment support** - Dev/Test/Prod separation
-6. **Documentation as code** - Self-documenting playbooks
+### Azure Services Implementation
+1. **Hybrid Connectivity** - VPN Gateway connecting homelab to Azure VNet
+2. **Backup & DR** - Azure Backup for critical homelab data
+3. **Monitoring** - Azure Monitor for hybrid infrastructure visibility
+4. **Identity** - Azure AD for unified authentication
+5. **Cost Management** - Budget alerts and resource optimization
+6. **Security** - Azure Security Center, Key Vault, NSGs
 
 ---
 
-## ☁️ AWS Integration Projects
+## 🔒 Security Implementation Focus
 
-### Build Philosophy: Manual → Terraform
+### Network Security
+- Segmented VLANs for service isolation
+- pfSense firewall rules with least-privilege access
+- IDS/IPS with Suricata for threat detection
+- VPN-only access for management interfaces
+- Geographic IP blocking for public services
 
-Each project will be built manually first to understand the components, then automated with Infrastructure-as-Code.
+### Identity & Access Management
+- Azure AD integration for centralized identity
+- Multi-factor authentication (MFA) enforcement
+- Role-based access control (RBAC)
+- Privileged Identity Management (PIM)
+- Regular access reviews and audits
 
-### Planned Projects
+### Data Protection
+- Encryption at rest for all storage
+- TLS 1.3 for all network communication
+- Azure Backup for critical data
+- Immutable backups for ransomware protection
+- Regular backup testing and restoration drills
 
-#### 1. Three-Tier Web Application
-**Components:**
-- Web Tier: EC2 instances behind Application Load Balancer
-- Application Tier: EC2/Lambda functions
-- Data Tier: RDS Multi-AZ deployment
-- Route 53 DNS management
-
-**Skills Focus:** VPC design, security groups, IAM roles, load balancing
-
-#### 2. High Availability Architecture
-**Components:**
-- Multi-AZ deployment across 3 availability zones
-- Auto Scaling Groups with dynamic scaling policies
-- RDS read replicas and automated backups
-- Route 53 health checks and failover routing
-
-**Skills Focus:** Resilience, disaster recovery, performance optimization
-
-#### 3. Serverless Application
-**Components:**
-- S3 static website hosting
-- CloudFront CDN distribution
-- API Gateway + Lambda backend
-- DynamoDB database
-- Cognito authentication
-
-**Skills Focus:** Event-driven architecture, cost optimization, managed services
-
-#### 4. Hybrid Cloud Connection
-**Components:**
-- Site-to-Site VPN between homelab and AWS VPC
-- VPC Peering and Transit Gateway
-- Direct Connect concepts (simulated)
-- AWS Systems Manager for hybrid management
-
-**Skills Focus:** Network integration, hybrid architecture patterns
-
-#### 5. Security & Compliance Implementation
-**Components:**
-- IAM roles and policies (principle of least privilege)
-- CloudTrail logging and analysis
-- KMS encryption for data at rest
-- AWS Config rules and compliance checking
-- GuardDuty threat detection
-- Secrets Manager integration
-
-**Skills Focus:** Security best practices, compliance frameworks
-
-#### 6. Cost Optimization Strategy
-**Components:**
-- Cost Explorer analysis and reporting
-- CloudWatch billing alarms
-- S3 Intelligent Tiering and lifecycle policies
-- EC2 rightsizing recommendations
-- Reserved Instances and Savings Plans analysis
-
-**Skills Focus:** FinOps, cost-aware architecture
-
-#### 7. Infrastructure as Code
-**Final Stage:** All AWS projects automated with:
-- Terraform modules and state management
-- CloudFormation templates
-- CI/CD pipeline for infrastructure changes
+### Compliance & Monitoring
+- Centralized logging with Wazuh/Graylog
+- Security incident response procedures
+- Vulnerability scanning and patch management
+- Compliance reporting (CIS benchmarks)
+- Regular security audits and assessments
 
 ---
 
 ## 📊 Progress Tracking
 
-### RHCSA Preparation
-- [ ] Week 1-2: Linux Fundamentals
-- [ ] Week 3-4: File Management & Text Processing
-- [ ] Week 5-6: System Administration Basics
-- [ ] Week 7-8: Storage & File Systems
-- [ ] Week 9-10: Networking & Services
-- [ ] Week 11-12: Mock Exams & Critical Topics
-- [ ] **RHCSA Exam Scheduled:** TBD
+### Security+ Certification
+- [ ] Week 1-2: Threats, Attacks & Vulnerabilities
+- [ ] Week 3-4: Architecture & Design
+- [ ] Week 5-6: Implementation (Cryptography, PKI, IAM)
+- [ ] Week 7: Operations & Incident Response
+- [ ] Week 8: Governance, Risk & Compliance + Practice Exams
+- [ ] **Security+ Exam Scheduled:** TBD
 
-### RHCE Preparation
-- [ ] Week 13-14: Ansible Fundamentals
-- [ ] Week 15-16: Playbooks & Roles
-- [ ] Week 17-18: Advanced Automation
-- [ ] Week 19-20: Mock Exams
-- [ ] **RHCE Exam Scheduled:** TBD
+### AZ-104 Azure Administrator
+- [ ] Week 9-10: Azure Identity & Governance
+- [ ] Week 11-12: Storage & Virtual Machines
+- [ ] Week 13-14: Networking & Security
+- [ ] Week 15: Monitoring & Backup
+- [ ] Week 16: Practice Labs & Mock Exams
+- [ ] **AZ-104 Exam Scheduled:** TBD
+
+### Terraform Associate Certification
+- [ ] Week 17-18: Terraform Fundamentals
+- [ ] Week 19-20: State Management & Modules
+- [ ] Week 21-22: Advanced Terraform & Multi-Cloud
+- [ ] Week 23: Terraform Cloud & Enterprise
+- [ ] Week 24: Practice Exams & Real-World Scenarios
+- [ ] **Terraform Exam Scheduled:** TBD
 
 ### Homelab Milestones
-- [ ] Proxmox production server configured
-- [ ] Proxmox test environment operational
-- [ ] First service automated with Ansible
-- [ ] All core services Ansible-managed
-- [ ] Monitoring stack operational
-- [ ] Web portal deployed
-- [ ] AWS hybrid connection established
+- [ ] Security baseline established (pfSense, VPN, monitoring)
+- [ ] All services behind reverse proxy with SSL/TLS
+- [ ] Azure hybrid connectivity operational
+- [ ] First Azure resource deployed via Terraform
+- [ ] All Azure infrastructure fully Terraform-managed
+- [ ] Security monitoring dashboard operational
+- [ ] Automated backup and DR tested
 
 ---
 
 ## 📖 Documentation Structure
 
-Each service deployment includes:
-- **Overview:** Purpose and architecture
-- **Prerequisites:** Dependencies and requirements
-- **Manual Setup Guide:** Step-by-step installation
-- **Ansible Playbook:** Automated deployment
-- **Configuration:** Key settings and customization
-- **Troubleshooting:** Common issues and solutions
-- **Maintenance:** Backup, updates, monitoring
+Each implementation includes:
+- **Security Considerations:** Threat model and security controls
+- **Architecture Diagram:** Network topology and data flows
+- **Manual Setup Guide:** Step-by-step implementation
+- **Terraform Code:** Infrastructure-as-Code deployment
+- **Configuration:** Security hardening and best practices
+- **Monitoring:** Security logging and alerting
+- **Incident Response:** Troubleshooting and recovery procedures
 
-Documentation location: `/docs/services/[service-name]/`
+Documentation location: `/docs/[category]/[service-name]/`
 
 ---
 
 ## 🛠️ Technology Stack
 
 **Virtualization:** Proxmox VE  
-**Operating Systems:** Ubuntu Server, AlmaLinux 9, Rocky Linux  
-**Automation:** Ansible, Bash scripting  
+**Operating Systems:** Ubuntu Server, pfSense  
+**Security:** Wazuh, Suricata/Snort, Fail2Ban, OpenVPN/WireGuard  
+**Cloud Platform:** Microsoft Azure (VMs, VNets, Storage, Backup, Monitor)  
+**Infrastructure-as-Code:** Terraform, Azure Resource Manager  
 **Containers:** Docker, Podman  
-**Monitoring:** Grafana, Prometheus, Uptime Kuma  
-**Networking:** pfSense, Pi-hole, Nginx  
-**Cloud:** AWS (EC2, S3, Lambda, RDS, Route53)  
-**IaC:** Terraform, CloudFormation  
+**Monitoring:** Grafana, Prometheus, Azure Monitor, Wazuh  
+**Networking:** pfSense, Nginx, Azure VPN Gateway  
+**Identity:** Azure Active Directory  
 **Version Control:** Git, GitHub  
+**CI/CD:** GitHub Actions, Azure DevOps  
 
 ---
 
 ## 🎓 Learning Resources
 
-- Red Hat Official Documentation
-- *The Linux Bible* - Christopher Negus
-- *How Linux Works* - Brian Ward
-- Ansible Documentation
-- AWS Well-Architected Framework
-- Terraform Documentation
-- Community forums and r/homelab
+**Security+:**
+- CompTIA Security+ Official Study Guide (SY0-701)
+- Professor Messer's Security+ Training Course
+- TryHackMe Security+ Learning Path
+- Practice exams (Dion Training, Messer)
+
+**AZ-104:**
+- Microsoft Learn AZ-104 Learning Path
+- John Savill's Azure Master Class (YouTube)
+- Azure Documentation and Quickstarts
+- Whizlabs/MeasureUp practice exams
+
+**Terraform:**
+- HashiCorp Terraform Tutorials
+- Terraform: Up & Running (O'Reilly)
+- Terraform Associate Certification Guide
+- Azure Terraform Documentation
+
+**General:**
+- Azure Well-Architected Framework
+- CIS Benchmarks for security hardening
+- NIST Cybersecurity Framework
+- Community forums (r/homelab, r/CompTIA, r/Azure)
 
 ---
 
@@ -293,42 +314,54 @@ Documentation location: `/docs/services/[service-name]/`
 homelab/
 ├── README.md                          # This file
 ├── docs/
-│   ├── RHCSA-study-plan.md
-│   ├── RHCE-study-plan.md
-│   ├── services/                      # Service-specific documentation
-│   └── aws/                           # AWS project documentation
-├── ansible/
-│   ├── inventories/
-│   ├── playbooks/
-│   ├── roles/
-│   └── group_vars/
+│   ├── certifications/
+│   │   ├── security-plus-study-plan.md
+│   │   ├── az-104-study-plan.md
+│   │   └── terraform-study-plan.md
+│   ├── security/                      # Security documentation
+│   ├── azure/                         # Azure architecture docs
+│   └── services/                      # Service-specific guides
 ├── terraform/
-│   ├── aws/
-│   └── modules/
-├── scripts/                           # Utility scripts
-└── configs/                           # Configuration templates
+│   ├── azure/
+│   │   ├── environments/
+│   │   ├── modules/
+│   │   └── README.md
+│   └── homelab/                       # Terraform for local resources
+├── configs/                           # Configuration templates
+│   ├── pfsense/
+│   ├── nginx/
+│   └── security/
+├── scripts/                           # Automation scripts
+│   ├── backup/
+│   ├── monitoring/
+│   └── security/
+└── diagrams/                          # Architecture diagrams
+    ├── network-topology.png
+    └── azure-architecture.png
 ```
 
 ---
 
 ## 🤝 Contributing
 
-This is a personal learning repository, but suggestions and feedback are welcome! Feel free to open an issue if you spot errors or have recommendations.
+This is a personal learning repository, but suggestions and feedback are welcome! Feel free to open an issue if you spot errors or have recommendations for security improvements or cloud architecture.
 
 ---
 
 ## 📜 License
 
-MIT License - Feel free to use this as inspiration for your own homelab journey.
+MIT License - Feel free to use this as inspiration for your own homelab and certification journey.
 
 ---
 
 ## 🔗 Connect
 
-**Blog/Portfolio:** uploadtigris.com  
+**Blog/Portfolio:** [uploadtigris.github.io](https://uploadtigris.github.io/)  
+**LinkedIn:** [Your LinkedIn Profile]  
 **Progress Updates:** [Link to blog/social media]
 
 ---
 
-*Last Updated: January 2026*  
-*Current Phase: RHCSA Preparation - Week 1*
+*Last Updated: February 2026*  
+*Current Phase: Security+ Preparation - Week 1*  
+*Next Milestone: Security+ Certification*
