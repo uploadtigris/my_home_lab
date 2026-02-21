@@ -1,4 +1,4 @@
-<img src="/home/tigris/Documents/my_home_lab/images/Pi-hole_vector_logo.svg.png" width="150">
+<img src="images/Pi-hole_vector_logo.svg.png" width="150">
 
 # Pi-hole Setup Guide
 
