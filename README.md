@@ -1,72 +1,48 @@
-# Homelab Infrastructure
-Personal lab environment for hands-on learning in network security, 
-systems programming, and infrastructure.
+# Homelab
 
 ---
 
-# Learning Roadmap
+## Hardware
 
-## Current Focus
-- [ ] Red Hat Certified Systems Administrator (RHCSA)
+**Primary Server**
+- Ryzen 5 3600, 16GB RAM, 2x 2TB RAID 1
+- Proxmox VE
 
-## Up Next
-- [ ] *C Programming: A Modern Approach* — K.N. King
-- [ ] *The Linux Programming Interface* — Michael Kerrisk
+**Thinkpad W541**
+- Intel i7, 32GB RAM, AlmaLinux
+- Security testing and experimentation
+
+---
+
+## Services
+- Pi-hole — DNS filtering
+- pfSense — firewall/VPN (planned)
+- Wazuh — SIEM (planned)
+
+---
+
+## Roadmap
+
+- [ ] RHCSA
 - [ ] CCNA
-- [ ] Integrate a SIEM (Wazuh)
-
----
-
-# Hardware
-
-**Primary Server (Desktop)**
-- Ryzen 5 3600, 16GB RAM
-- 2x 2TB HDD (RAID 1)
-- Proxmox VE hypervisor
-
-**Test Server (Thinkpad W541)**
-- Intel i7, 32GB RAM
-- Alma Linux
-- Used for security testing and experimentation
-
----
-
-## Current Services
-- Pi-hole (DNS filtering)
-- pfSense (planned — firewall/VPN)
-- Wazuh (planned — SIEM and security monitoring)
+- [ ] RHCE
+- [ ] Wazuh SIEM deployment
 
 ---
 
 ## Planned Projects
-
-**Network Security:**
-- Network packet capture and analysis tool (C + libpcap)
-- Threat detection agent for Linux hosts
-- SIEM/log analysis setup with Wazuh
-- Network security monitoring with Suricata + Zeek
-
-**Systems Programming:**
-- Linux process monitor in C
-- File integrity monitor in C
-- Port scanner (C then rewritten in Go)
-
-**Infrastructure:**
-- pfSense firewall with IDS/IPS rules
-- Incident response environment
-- Infrastructure-as-Code with Terraform
+- Bash and Python automation for system administration
+- Log analysis and monitoring tooling
+- pfSense firewall setup with IDS/IPS rules
+- Wazuh SIEM deployment and configuration
+- Suricata + Zeek network monitoring
+- Ansible playbooks for configuration management
 
 ---
 
-## Technology Stack
-
-**Virtualization:** Proxmox VE  
-**OS:** AlmaLinux, Ubuntu Server, CachyOS  
-**Languages:** C (learning), Python, Bash  
-**Security:** pfSense, Suricata, Zeek, Wazuh (planned)  
-**IaC:** Terraform (planned)  
-**Monitoring:** Grafana, Prometheus (planned)  
+## Stack
+`Proxmox` `AlmaLinux` `CachyOS` `Ubuntu` `Python` `Bash` `Ansible` `pfSense` `Suricata` `Zeek` `Wazuh`
 
 ---
 
-*Last Updated: March 2026*
+*Last updated: March 2026*
