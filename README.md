@@ -1,19 +1,21 @@
 # Homelab Infrastructure
+Personal lab environment for hands-on learning in network security, 
+systems programming, and infrastructure.
 
-Personal lab environment for hands-on learning in cybersecurity, cloud administration, and infrastructure automation.
+---
 
 # Learning Roadmap
 
 ## Current Focus
-
 - [ ] Red Hat Certified Systems Administrator (RHCSA)
 
 ## Up Next
-
 - [ ] *C Programming: A Modern Approach* — K.N. King
 - [ ] *The Linux Programming Interface* — Michael Kerrisk
 - [ ] CCNA
-- [ ] Integrate a SIEM
+- [ ] Integrate a SIEM (Wazuh)
+
+---
 
 # Hardware
 
@@ -27,37 +29,44 @@ Personal lab environment for hands-on learning in cybersecurity, cloud administr
 - Proxmox VE hypervisor
 - Used for security testing and experimentation
 
+---
+
 ## Current Services
-
 - Pi-hole (DNS filtering)
-- pfSense (planned - firewall/VPN)
-- Security monitoring (planned)
-
-## Planned Projects
-
-**Security Focus:**
-- Vulnerability management lab
-- SIEM/log analysis setup
-- Network security monitoring
-- Incident response environment
-
-**Cloud Integration:**
-- Azure hybrid connectivity
-- Backup and disaster recovery
-- Infrastructure-as-Code with Terraform
-
-## Documentation
-
-Configuration files, setup guides, and architecture diagrams stored in `/docs`
-
-## Technology Stack
-
-**Virtualization:** Proxmox VE
-**Security:** pfSense, Suricata, Wazuh (planned)
-**Cloud:** Azure (future integration)
-**IaC:** Terraform (future)
-**Monitoring:** Grafana, Prometheus (planned)
+- pfSense (planned — firewall/VPN)
+- Wazuh (planned — SIEM and security monitoring)
 
 ---
 
-Last Updated: March 2026
+## Planned Projects
+
+**Network Security:**
+- Network packet capture and analysis tool (C + libpcap)
+- Threat detection agent for Linux hosts
+- SIEM/log analysis setup with Wazuh
+- Network security monitoring with Suricata + Zeek
+
+**Systems Programming:**
+- Linux process monitor in C
+- File integrity monitor in C
+- Port scanner (C then rewritten in Go)
+
+**Infrastructure:**
+- pfSense firewall with IDS/IPS rules
+- Incident response environment
+- Infrastructure-as-Code with Terraform
+
+---
+
+## Technology Stack
+
+**Virtualization:** Proxmox VE  
+**OS:** AlmaLinux, Ubuntu Server, CachyOS  
+**Languages:** C (learning), Python, Bash  
+**Security:** pfSense, Suricata, Zeek, Wazuh (planned)  
+**IaC:** Terraform (planned)  
+**Monitoring:** Grafana, Prometheus (planned)  
+
+---
+
+*Last Updated: March 2026*
