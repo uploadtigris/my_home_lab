@@ -4,9 +4,7 @@ Personal lab environment for hands-on learning in cybersecurity, cloud administr
 
 ## Current Focus
 
-**Security+ Certification** (Next 2 weeks)
-- Studying threats, vulnerabilities, cryptography, incident response
-- Building practical security projects in homelab
+**Learning the GO programming language**
 
 ## Hardware
 
