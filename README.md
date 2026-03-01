@@ -2,11 +2,20 @@
 
 Personal lab environment for hands-on learning in cybersecurity, cloud administration, and infrastructure automation.
 
+# Learning Roadmap
+
 ## Current Focus
 
-**Learning the GO programming language**
+- [ ] Red Hat Certified Systems Administrator (RHCSA)
 
-## Hardware
+## Up Next
+
+- [ ] *C Programming: A Modern Approach* — K.N. King
+- [ ] *The Linux Programming Interface* — Michael Kerrisk
+- [ ] CCNA
+- [ ] Integrate a SIEM
+
+# Hardware
 
 **Primary Server (Desktop)**
 - Ryzen 5 3600, 16GB RAM
@@ -37,13 +46,6 @@ Personal lab environment for hands-on learning in cybersecurity, cloud administr
 - Backup and disaster recovery
 - Infrastructure-as-Code with Terraform
 
-## Learning Path
-
-1. Security+ (Weeks 1-2)
-2. Junior Security Analyst role (Months 1-3)
-3. RHCSA (Months 3-6, parallel with job search)
-4. Azure/Cloud skills (after security role secured)
-
 ## Documentation
 
 Configuration files, setup guides, and architecture diagrams stored in `/docs`
@@ -58,4 +60,4 @@ Configuration files, setup guides, and architecture diagrams stored in `/docs`
 
 ---
 
-Last Updated: February 2026
+Last Updated: March 2026
