@@ -26,7 +26,7 @@ systems programming, and infrastructure.
 
 **Test Server (Thinkpad W541)**
 - Intel i7, 32GB RAM
-- Proxmox VE hypervisor
+- Alma Linux
 - Used for security testing and experimentation
 
 ---
