@@ -21,7 +21,7 @@ Personal infrastructure for learning, certification prep, and systems experiment
 
 ## VM Infrastructure
 
-All VMs run AlmaLinux (minimal) unless noted. Local-lvm (NVMe, ~465 GB) for VM storage.
+All VMs run AlmaLinux (minimal) unless noted. Local-lvm (NVMe, ~465 GB) for VM storage.\
 ZFS pool at `/mnt/zfsdata` on Proxmox host — accessed by VM 6 over NFS.
 
 | VM | Services | vCPUs | RAM | Disk | Notes |
