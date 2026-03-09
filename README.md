@@ -77,4 +77,8 @@ ZFS pool at `/mnt/zfsdata` on Proxmox host — accessed by VM 6 over NFS.
 
 ---
 
+## Learning
+- [RHCSA Roadmap](https://github.com/uploadtigris/my_home_lab/blob/main/notes/rhcsa/rhcsa_study_roadmap.md)
+- [RHCSA Exam Objectives](https://github.com/uploadtigris/my_home_lab/blob/main/notes/rhcsa/Exam_Objectives.md)
+
 *Last updated: March 2026*
