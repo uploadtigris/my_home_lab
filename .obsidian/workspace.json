@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/infrastructure/proxmox-setup.md",
+                "file": "notes/Learn to Cloud/Phase 1 - Linux and Bash.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "proxmox-setup"
+              "title": "Phase 1 - Linux and Bash"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 371.5018424987793,
     "collapsed": true
   },
   "right": {
@@ -186,6 +186,16 @@
   },
   "active": "bc3ae016846ecfaa",
   "lastOpenFiles": [
+    "notes/Learn to Cloud/Phase 6 - Securing Your Cloud Applications.md",
+    "notes/Learn to Cloud/Phase 5 - DevOps Fundamentals.md",
+    "notes/Learn to Cloud/Phase 4 - Cloud Platform Fundamentals.md",
+    "notes/Learn to Cloud/Phase 3 - Programming Fundamentals.md",
+    "notes/Learn to Cloud/Phase 2 - Networking Fundamentals.md",
+    "notes/Learn to Cloud/Phase 1 - Linux and Bash.md",
+    "notes/rhcsa/RHCSA.md",
+    "notes/Learn to Cloud",
+    "notes/Untitled.md",
+    "docs/infrastructure/proxmox-setup.md",
     "notes/linux-topics/systemd.md"
   ]
 }
