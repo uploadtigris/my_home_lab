@@ -6,9 +6,9 @@ A structured sequence for building proficiency in Python, Docker, Kubernetes, Te
 
 ## Two Categories of Skill
 
-**Tool skills** — Docker, Kubernetes, Terraform, AWS. Learned by doing. The concepts are shallow enough that you don't need to master theory first; you need reps with real tasks. Courses work as guided scaffolding, but only if they force you to actually run things, not just watch.
+**Tool skills** — Docker, Kubernetes, Terraform, AWS. Learned by doing. The concepts are shallow enough that mastering theory first isn't required; what's needed is reps with real tasks. Courses work as guided scaffolding, but only if they force actually running things, not just watching.
 
-**Language skills** — Python. You already have foundational Python. What you need isn't more syntax — it's fluency through building real things that feel like work you'd actually do on the job.
+**Language skills** — Python. The foundational knowledge is already there. What's missing isn't more syntax — it's fluency through building real things that feel like actual on-the-job work.
 
 ---
 
@@ -18,7 +18,7 @@ A structured sequence for building proficiency in Python, Docker, Kubernetes, Te
 
 ### 1. Python *(Now + ongoing, 45–60 min/day)*
 
-You don't need a course — you need reps. Write scripts that do real sysadmin work:
+No course needed — just reps. Write scripts that do real sysadmin work:
 
 - Parse logs
 - Hit APIs
@@ -43,7 +43,7 @@ Highest ROI credential given Amazon employment (discount + internal visibility).
 
 ### 3. Docker *(Baked into Python projects — already in progress)*
 
-Don't take a separate Docker course. Deepen it by containerizing everything you build. Real Docker knowledge comes from friction with real projects.
+Don't take a separate Docker course. Deepen it by containerizing everything built along the way. Real Docker knowledge comes from friction with real projects.
 
 **Current focus:** Multi-stage builds, bind mounts vs volumes, environment variable handling, `docker compose` for multi-container projects.
 
@@ -51,7 +51,7 @@ Don't take a separate Docker course. Deepen it by containerizing everything you 
 
 ### 4. Terraform *(After AWS SAA)*
 
-Terraform makes much more sense once you understand what AWS resources *are*. Terraforming things you don't understand is a fast way to spin your wheels.
+Terraform makes much more sense once the underlying AWS resources are understood. Terraforming things without that context is a fast way to spin wheels.
 
 **Resource:** [HashiCorp Developer Learn platform](https://developer.hashicorp.com/terraform/tutorials) + `#90DaysOfDevOps` Terraform sections.
 
@@ -89,12 +89,12 @@ Kubernetes is Docker with significantly more operational surface area. Don't rus
 Use both — but for different things:
 
 - **[Learn to Cloud](https://learntocloud.guide)** — good structural scaffolding for the cloud/infra side (AWS, Terraform, K8s). Tells you *what* to build and in what order, which reduces decision fatigue.
-- **[Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)** — better for Python specifically. You're not trying to understand a tool; you're building fluency with a language you already partially know. Building something you understand end-to-end beats typing along with a guided project.
+- **[Build Your Own X](https://github.com/codecrafters-io/build-your-own-x)** — better for Python specifically. The goal isn't to understand a tool; it's building fluency with a language where foundational knowledge already exists. Building something end-to-end beats typing along with a guided project.
 
 ---
 
 ## The Rule
 
-> Every skill you learn should produce something that **runs** — a script, a container, a deployed resource. Not notes. Not a certificate of completion. Something that does a thing.
+> Every skill learned should produce something that **runs** — a script, a container, a deployed resource. Not notes. Not a certificate of completion. Something that does a thing.
 
 Spend more time in a terminal than watching anything.
