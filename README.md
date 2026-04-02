@@ -62,7 +62,7 @@ ZFS pool at `/mnt/zfsdata` on Proxmox host — accessed by VM 6 over NFS.
 
 ## Cert Path
 
-- [ ] Security+
+- [X] Security+
 - [ ] RHCSA
 - [ ] AWS SysOps Administrator
 - [ ] AWS Security Specialist
