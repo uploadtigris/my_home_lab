@@ -1,0 +1,11 @@
+# Storage & systemd
+- systemd units and targets
+- journalctl and logging
+- Partitioning (fdisk, parted)
+- LVM (pvcreate, vgcreate, lvcreate)
+- Stratis storage
+- VDO volumes
+- firewalld
+- NetworkManager and network config
+- Hostname and DNS
+---------------------------------------
