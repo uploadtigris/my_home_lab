@@ -1,0 +1,11 @@
+# SELinux & Containers
+- SELinux modes and policies
+- chcon and restorecon
+- audit2allow and audit logs
+- semanage (ports, fcontexts, booleans)
+- Podman containers
+- autofs
+- NFS mounts
+- Time sync with chrony
+- Kernel parameters (sysctl)
+- Boot target recovery and root password reset
