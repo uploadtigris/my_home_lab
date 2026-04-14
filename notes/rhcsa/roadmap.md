@@ -1,5 +1,6 @@
-RHCSA Study Timeline — 6 Months
-Weeks 1–3 — Foundation
+# RHCSA Study Timeline — 6 Months
+
+## Weeks 1–3 — Foundation
 
 File system hierarchy and navigation
 File permissions (chmod, chown, ACLs)
@@ -10,7 +11,7 @@ Package management (dnf)
 Basic shell scripting
 Cron and at jobs
 
-Weeks 4–6 — System Management
+## Weeks 4–6 — System Management
 
 SSH configuration
 Boot process overview
@@ -19,7 +20,7 @@ journalctl and logging
 Tuned profiles (tuned-adm)
 Kernel parameters (sysctl)
 Time sync with chrony
-# Hostname, DNS, and NetworkManager
+Hostname, DNS, and NetworkManager
 
 ## Weeks 7–9 — Storage
 
