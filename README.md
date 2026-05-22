@@ -9,7 +9,6 @@ Personal infrastructure for learning, certification prep, and systems experiment
 | Host | Specs | Role |
 |---|---|---|
 | Primary Server | Ryzen 5 3600 · 16GB RAM · 2×2TB RAID 1 | Proxmox VE hypervisor |
-| ThinkPad W541 | Intel i7 · 32GB RAM · AlmaLinux | Security testing and experimentation |
 
 ---
 
