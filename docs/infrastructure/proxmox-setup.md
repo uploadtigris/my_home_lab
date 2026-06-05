@@ -1,4 +1,4 @@
-# Proxmox VE Setup
++# Proxmox VE Setup
 
 ## Installation
 

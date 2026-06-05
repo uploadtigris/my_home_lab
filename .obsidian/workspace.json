@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Learn to Cloud/Phase 1 - Linux and Bash.md",
+                "file": "docs/Notes/07_installing_KVM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Phase 1 - Linux and Bash"
+              "title": "07_installing_KVM"
             }
           }
         ]
@@ -186,16 +186,19 @@
   },
   "active": "bc3ae016846ecfaa",
   "lastOpenFiles": [
+    "docs/infrastructure/KVM based architecture.md",
+    "docs/Notes/07_installing_KVM.md",
+    "docs/infrastructure/proxmox-setup.md",
+    "docs/Notes/Ex_Repo_Organization.md",
+    "notes/Learn to Cloud/Phase 1 - Linux and Bash.md",
     "notes/Learn to Cloud/Phase 6 - Securing Your Cloud Applications.md",
     "notes/Learn to Cloud/Phase 5 - DevOps Fundamentals.md",
     "notes/Learn to Cloud/Phase 4 - Cloud Platform Fundamentals.md",
     "notes/Learn to Cloud/Phase 3 - Programming Fundamentals.md",
     "notes/Learn to Cloud/Phase 2 - Networking Fundamentals.md",
-    "notes/Learn to Cloud/Phase 1 - Linux and Bash.md",
     "notes/rhcsa/RHCSA.md",
     "notes/Learn to Cloud",
     "notes/Untitled.md",
-    "docs/infrastructure/proxmox-setup.md",
     "notes/linux-topics/systemd.md"
   ]
 }
