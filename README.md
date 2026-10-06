@@ -71,9 +71,9 @@ I organize the lab by the areas a network team actually owns.
 
 | Domain | What | Status |
 |---|---|---|
-| Monitoring | LibreNMS + SNMP on the switch and firewall; Prometheus and Grafana | ![planned](https://img.shields.io/badge/planned-757575) |
+| Monitoring | LibreNMS + SNMP on the switch and firewall | ![planned](https://img.shields.io/badge/planned-757575) |
 | Logging and SIEM | Wazuh rebuild with pfSense syslog | ![planned](https://img.shields.io/badge/planned-757575) |
-| Power | UPS + NUT, power metrics in Grafana | ![planned](https://img.shields.io/badge/planned-757575) |
+| Power | UPS + NUT for graceful shutdown | ![planned](https://img.shields.io/badge/planned-757575) |
 | Backup and recovery | Config backups for pfSense, switch and AP; restic to a USB drive | ![planned](https://img.shields.io/badge/planned-757575) |
 
 ### Management
