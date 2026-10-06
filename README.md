@@ -16,6 +16,10 @@ running DNS and DHCP, and writing down every problem I fix so I only solve it on
 
 ## Network gear
 
+<p align="center">
+  <img src="images/homelab.png" alt="Homelab network diagram" width="400">
+</p>
+
 | Device | Role | Status |
 |---|---|---|
 | Sharevdi mini PC running pfSense | Router, firewall, DHCP; inter-VLAN routing once segmented | ![running](https://img.shields.io/badge/running-2E7D32) |
