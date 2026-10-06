@@ -4,8 +4,12 @@ My home network and the services on it. I use it to practice what a network
 technician does on the job: segmenting networks, writing firewall policy,
 running DNS and DHCP, and writing down every problem I fix so I only solve it once.
 
-**Status means what it says:** ![running](https://img.shields.io/badge/running-2E7D32) is live today,
+**Status means what it says:** 
+
+![running](https://img.shields.io/badge/running-2E7D32) is live today,
+
 ![in progress](https://img.shields.io/badge/in%20progress-F9A825) is being built this month,
+
 ![planned](https://img.shields.io/badge/planned-757575) is designed but not started.
 
 ---
