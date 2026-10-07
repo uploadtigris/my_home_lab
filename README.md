@@ -57,8 +57,7 @@ Full build and write-up: [network-segmentation-ids](https://github.com/uploadtig
 ## Projects
 
 Each project has its own repo with the same layout: a `README.md` for the design,
-`docs/` for numbered setup notes, and `images/` for screenshots. Problems I hit go
-into [sysadmin_handbook](https://github.com/uploadtigris/sysadmin_handbook) as one write-up each.
+`docs/` for numbered setup notes, and `images/` for screenshots.
 
 | Project | What it is | Status | Start here |
 |---|---|---|---|
@@ -122,7 +121,6 @@ I organize the lab by the areas a network team actually owns.
 
 ## Related
 
-- Troubleshooting write-ups: [sysadmin_handbook](https://github.com/uploadtigris/sysadmin_handbook)
 - Study notes: [networking_notes](https://github.com/uploadtigris/networking_notes)
 - Portfolio: [uploadtigris.github.io](https://uploadtigris.github.io)
 
