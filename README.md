@@ -57,13 +57,13 @@ Full build and write-up: [network-segmentation-ids](https://github.com/uploadtig
 ## Projects
 
 Each project has its own repo with the same layout: a `README.md` for the design,
-`docs/` for numbered setup notes, and `images/` for screenshots.
+`docs/` for the build notes, and `images/` for screenshots.
 
-| Project | What it is | Status | Start here |
-|---|---|---|---|
-| [network-segmentation-ids](https://github.com/uploadtigris/network-segmentation-ids) | Five VLANs on pfSense, a managed switch and a multi-SSID access point | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) | [Build log](https://github.com/uploadtigris/network-segmentation-ids/blob/main/docs/build-log.md) |
-| [piHole_network_DNS](https://github.com/uploadtigris/piHole_network_DNS) | Pi-hole as the DNS server for the whole network | ![running](https://img.shields.io/badge/running-2E7D32) | [Setup guide](https://github.com/uploadtigris/piHole_network_DNS/blob/main/docs/01_setup-guide.md) |
-| [wazuh-siem-homelab](https://github.com/uploadtigris/wazuh-siem-homelab) | Self-hosted Wazuh SIEM; first build retired, rebuild planned | ![planned](https://img.shields.io/badge/planned-757575) | [README](https://github.com/uploadtigris/wazuh-siem-homelab) |
+| Project | What it is | Status | README | Build |
+|---|---|---|---|---|
+| [network-segmentation-ids](https://github.com/uploadtigris/network-segmentation-ids) | Five VLANs on pfSense, a managed switch and a multi-SSID access point | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) | [README](https://github.com/uploadtigris/network-segmentation-ids/blob/main/README.md) | [Build log](https://github.com/uploadtigris/network-segmentation-ids/blob/main/docs/build-log.md) |
+| [piHole_network_DNS](https://github.com/uploadtigris/piHole_network_DNS) | Pi-hole as the DNS server for the whole network | ![running](https://img.shields.io/badge/running-2E7D32) | [README](https://github.com/uploadtigris/piHole_network_DNS/blob/main/README.md) | [Setup guide](https://github.com/uploadtigris/piHole_network_DNS/blob/main/docs/01_setup-guide.md) |
+| [wazuh-siem-homelab](https://github.com/uploadtigris/wazuh-siem-homelab) | Self-hosted Wazuh SIEM; first build retired, rebuild planned | ![planned](https://img.shields.io/badge/planned-757575) | [README](https://github.com/uploadtigris/wazuh-siem-homelab/blob/main/README.md) | [Build log](https://github.com/uploadtigris/wazuh-siem-homelab/blob/main/docs/build-log.md) |
 
 ---
 
@@ -114,7 +114,6 @@ I organize the lab by the areas a network team actually owns.
 ## Cert path
 
 - [x] CompTIA Security+
-- [ ] CompTIA Network+ (exam October 2026)
 - [ ] Cisco CCNA
 
 ---
