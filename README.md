@@ -22,10 +22,10 @@ running DNS and DHCP, and writing down every problem I fix so I only solve it on
 
 | Device | Role | Status |
 |---|---|---|
-| Sharevdi mini PC running pfSense | Router, firewall, DHCP; inter-VLAN routing once segmented | ![running](https://img.shields.io/badge/running-2E7D32) |
+| Sharevdi mini PC running pfSense | Router, firewall, DHCP; inter-VLAN routing and least-privilege rules between five VLANs | ![running](https://img.shields.io/badge/running-2E7D32) |
 | Netgear GS308EP (8-port PoE+ smart managed switch) | 802.1Q VLANs, powers the access point | ![running](https://img.shields.io/badge/running-2E7D32) |
-| TP-Link EAP610 | Wi-Fi access point (Guest SSID live today) | ![running](https://img.shields.io/badge/running-2E7D32) |
-| Raspberry Pi 2 Model B | Pi-hole, DNS filtering for the whole network | ![running](https://img.shields.io/badge/running-2E7D32) |
+| TP-Link EAP610 | Wi-Fi access point, one SSID per VLAN (Home, IoT, Guest) | ![running](https://img.shields.io/badge/running-2E7D32) |
+| Raspberry Pi 2 Model B | Pi-hole, DNS filtering, on the Servers VLAN | ![running](https://img.shields.io/badge/running-2E7D32) |
 | Dell Latitude 7490, Ubuntu LTS, 16 GB RAM | Server for NextCloud, monitoring and logging | ![planned](https://img.shields.io/badge/planned-757575) |
 | APC Back-UPS 550 | Battery backup with NUT for graceful shutdown | ![planned](https://img.shields.io/badge/planned-757575) |
 | TechMojo 10" rack | Holds it all | ![running](https://img.shields.io/badge/running-2E7D32) |
@@ -35,19 +35,20 @@ running DNS and DHCP, and writing down every problem I fix so I only solve it on
 ## Network design
 
 Five VLANs, each on `10.0.<VLAN>.0/24`, so a device's VLAN shows in its IP.
-![in progress](https://img.shields.io/badge/in%20progress-F9A825) (build: October 2026)
+![running](https://img.shields.io/badge/running-2E7D32) (phase 1 completed October 2026)
 
 | VLAN | Name | Subnet | Who lives here |
 |---|---|---|---|
-| 1 | Mgmt | 10.0.1.0/24 | Switch and access point management |
+| 1 | Mgmt | 10.0.1.0/24 | Switch, access point and firewall admin pages; the wired recovery port |
 | 20 | Trusted | 10.0.20.0/24 | My own laptop, phone and PCs |
 | 30 | IoT | 10.0.30.0/24 | Smart devices and the hydroponics project |
-| 40 | Guest | 10.0.40.0/24 | Visitors, internet only |
-| 50 | Servers | 10.0.50.0/24 | Pi-hole and the Latitude server |
+| 40 | Guest | 10.0.40.0/24 | Visitors and work laptops, internet only |
+| 50 | Servers | 10.0.50.0/24 | Pi-hole (the Latitude server moves here once NextCloud is set up) |
 
 - pfSense routes between VLANs over one 802.1Q trunk to the switch (router-on-a-stick).
-- IoT and Guest can't reach private address space; Trusted can reach everything.
-- One SSID per VLAN on the EAP610 (Trusted, IoT on 2.4 GHz only, Guest with client isolation).
+- Every VLAN allows what it needs, blocks the firewall and all internal networks, then allows the internet. Admin pages are reachable only from the wired Mgmt port.
+- Trusted and IoT must use Pi-hole for DNS. Guest uses its own pfSense gateway.
+- One SSID per VLAN on the EAP610 (Home, IoT on 2.4 GHz only, Guest on 5 GHz with client isolation).
 - Every rule gets tested from each VLAN, with the results recorded.
 
 Full build and write-up: [network-segmentation-ids](https://github.com/uploadtigris/network-segmentation-ids)
@@ -61,7 +62,7 @@ Each project has its own repo with the same layout: a `README.md` for the design
 
 | Project | What it is | Status | README | Build |
 |---|---|---|---|---|
-| [network-segmentation-ids](https://github.com/uploadtigris/network-segmentation-ids) | Five VLANs on pfSense, a managed switch and a multi-SSID access point | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) | [README](https://github.com/uploadtigris/network-segmentation-ids/blob/main/README.md) | [Build log](https://github.com/uploadtigris/network-segmentation-ids/blob/main/docs/build-log.md) |
+| [network-segmentation-ids](https://github.com/uploadtigris/network-segmentation-ids) | Five VLANs on pfSense, a managed switch and a multi-SSID access point | ![running](https://img.shields.io/badge/running-2E7D32) | [README](https://github.com/uploadtigris/network-segmentation-ids/blob/main/README.md) | [Build log](https://github.com/uploadtigris/network-segmentation-ids/blob/main/docs/build-log.md) |
 | [piHole_network_DNS](https://github.com/uploadtigris/piHole_network_DNS) | Pi-hole as the DNS server for the whole network | ![running](https://img.shields.io/badge/running-2E7D32) | [README](https://github.com/uploadtigris/piHole_network_DNS/blob/main/README.md) | [Setup guide](https://github.com/uploadtigris/piHole_network_DNS/blob/main/docs/01_setup-guide.md) |
 | [wazuh-siem-homelab](https://github.com/uploadtigris/wazuh-siem-homelab) | Self-hosted Wazuh SIEM; first build retired, rebuild planned | ![planned](https://img.shields.io/badge/planned-757575) | [README](https://github.com/uploadtigris/wazuh-siem-homelab/blob/main/README.md) | [Build log](https://github.com/uploadtigris/wazuh-siem-homelab/blob/main/docs/build-log.md) |
 
@@ -76,12 +77,12 @@ I organize the lab by the areas a network team actually owns.
 | Domain | What | Status |
 |---|---|---|
 | Physical layer | 10" rack, PoE budget, cabling | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) |
-| Segmentation | 5 VLANs on pfSense and the GS308EP | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) |
+| Segmentation | 5 VLANs on pfSense and the GS308EP | ![running](https://img.shields.io/badge/running-2E7D32) |
 | Routing and firewall | pfSense routing and firewalling the home network | ![running](https://img.shields.io/badge/running-2E7D32) |
-| Firewall policy | Default deny between VLANs, documented exceptions | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) |
+| Firewall policy | Least-privilege rules on every VLAN, documented exceptions | ![running](https://img.shields.io/badge/running-2E7D32) |
 | DNS | Pi-hole filtering DNS for every device | ![running](https://img.shields.io/badge/running-2E7D32) |
-| DHCP | Per-VLAN scopes and static mappings on pfSense | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) |
-| Wireless | One SSID per VLAN on the EAP610 | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) |
+| DHCP | Per-VLAN scopes and static mappings on pfSense | ![running](https://img.shields.io/badge/running-2E7D32) |
+| Wireless | One SSID per VLAN on the EAP610 | ![running](https://img.shields.io/badge/running-2E7D32) |
 | Remote access | WireGuard VPN into the lab | ![planned](https://img.shields.io/badge/planned-757575) |
 
 ### Operations
@@ -98,7 +99,7 @@ I organize the lab by the areas a network team actually owns.
 | Domain | What | Status |
 |---|---|---|
 | Documentation | IP plan, port map, diagrams, troubleshooting write-ups | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) |
-| Validation | Test matrix for every VLAN and firewall rule | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) |
+| Validation | Test matrix for every VLAN and firewall rule | ![running](https://img.shields.io/badge/running-2E7D32) |
 | Dashboard | Homepage dashboard linking every service | ![planned](https://img.shields.io/badge/planned-757575) |
 | Automation | Bash and Python scripts, config backups as code | ![planned](https://img.shields.io/badge/planned-757575) |
 
