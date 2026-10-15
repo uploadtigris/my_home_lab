@@ -27,7 +27,7 @@ running DNS and DHCP, and writing down every problem I fix so I only solve it on
 | TP-Link EAP610 | Wi-Fi access point, one SSID per VLAN (Home, IoT, Guest) | ![running](https://img.shields.io/badge/running-2E7D32) |
 | Raspberry Pi 2 Model B | Pi-hole, DNS filtering, on the Servers VLAN | ![running](https://img.shields.io/badge/running-2E7D32) |
 | Dell Latitude 7490, Ubuntu LTS, 16 GB RAM | Server for NextCloud and Home Assistant | ![planned](https://img.shields.io/badge/planned-757575) |
-| Dell Latitude 5420, Ubuntu, 32 GB RAM | Wazuh SIEM server, on switch port 7 in the Servers VLAN | ![planned](https://img.shields.io/badge/planned-757575) |
+| Dell Latitude 5420, Ubuntu 26.04 LTS, 32 GB RAM | Wazuh SIEM server, on switch port 7 (SIEM) in the Servers VLAN; agents on the server and a MacBook Air, and pfSense logs into it | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) |
 | APC Back-UPS 550 | Battery backup with NUT for graceful shutdown | ![planned](https://img.shields.io/badge/planned-757575) |
 | TechMojo 10" rack | Holds it all | ![running](https://img.shields.io/badge/running-2E7D32) |
 
@@ -44,7 +44,7 @@ Five VLANs, each on `10.0.<VLAN>.0/24`, so a device's VLAN shows in its IP.
 | 20 | Trusted | 10.0.20.0/24 | My own laptop, phone and PCs |
 | 30 | IoT | 10.0.30.0/24 | Smart devices and the hydroponics project |
 | 40 | Guest | 10.0.40.0/24 | Visitors and work laptops, internet only |
-| 50 | Servers | 10.0.50.0/24 | Pi-hole; the Wazuh server (Latitude 5420, port 7) and NextCloud (Latitude 7490, port 4) are planned |
+| 50 | Servers | 10.0.50.0/24 | Pi-hole; the Wazuh server (Latitude 5420, port 7); NextCloud and Home Assistant (Latitude 7490, port 4) are planned |
 
 - pfSense routes between VLANs over one 802.1Q trunk to the switch (router-on-a-stick).
 - Every VLAN allows what it needs, blocks the firewall and all internal networks, then allows the internet. Admin pages are reachable only from the wired Mgmt port.
@@ -65,7 +65,7 @@ Each project has its own repo with the same layout: a `README.md` for the design
 |---|---|---|---|---|
 | [network-segmentation-ids](https://github.com/uploadtigris/network-segmentation-ids) | Five VLANs on pfSense, a managed switch and a multi-SSID access point | ![running](https://img.shields.io/badge/running-2E7D32) | [README](https://github.com/uploadtigris/network-segmentation-ids/blob/main/README.md) | [Build log](https://github.com/uploadtigris/network-segmentation-ids/blob/main/docs/build-log.md) |
 | [piHole_network_DNS](https://github.com/uploadtigris/piHole_network_DNS) | Pi-hole as the DNS server for the whole network | ![running](https://img.shields.io/badge/running-2E7D32) | [README](https://github.com/uploadtigris/piHole_network_DNS/blob/main/README.md) | [Setup guide](https://github.com/uploadtigris/piHole_network_DNS/blob/main/docs/01_setup-guide.md) |
-| [wazuh-siem-homelab](https://github.com/uploadtigris/wazuh-siem-homelab) | Self-hosted Wazuh SIEM; first build retired, rebuild planned | ![planned](https://img.shields.io/badge/planned-757575) | [README](https://github.com/uploadtigris/wazuh-siem-homelab/blob/main/README.md) | [Build log](https://github.com/uploadtigris/wazuh-siem-homelab/blob/main/docs/build-log.md) |
+| [wazuh-siem-homelab](https://github.com/uploadtigris/wazuh-siem-homelab) | Self-hosted Wazuh SIEM; first build retired, rebuild in progress | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) | [README](https://github.com/uploadtigris/wazuh-siem-homelab/blob/main/README.md) | [Build log](https://github.com/uploadtigris/wazuh-siem-homelab/blob/main/docs/build-log.md) |
 | [hydroponics_sensing](https://github.com/uploadtigris/hydroponics_sensing) | A Gardyn garden revived with my own Pico W sensors, published over MQTT | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) | [README](https://github.com/uploadtigris/hydroponics_sensing/blob/main/README.md) | [Build log](https://github.com/uploadtigris/hydroponics_sensing/blob/main/docs/build-log.md) |
 
 ---
@@ -92,7 +92,7 @@ I organize the lab by the areas a network team actually owns.
 | Domain | What | Status |
 |---|---|---|
 | Monitoring | LibreNMS + SNMP on the switch and firewall | ![planned](https://img.shields.io/badge/planned-757575) |
-| Logging and SIEM | Wazuh rebuild with pfSense syslog | ![planned](https://img.shields.io/badge/planned-757575) |
+| Logging and SIEM | Wazuh rebuild; pfSense firewall events now log into it | ![in progress](https://img.shields.io/badge/in%20progress-F9A825) |
 | Power | UPS + NUT for graceful shutdown | ![planned](https://img.shields.io/badge/planned-757575) |
 | Backup and recovery | Config backups for pfSense, switch and AP; restic to a USB drive | ![planned](https://img.shields.io/badge/planned-757575) |
 
